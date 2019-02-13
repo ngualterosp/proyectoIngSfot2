@@ -8,9 +8,9 @@
    private $num_dorsal;
    private $edad;
 
-   function __construct()
+   function __construct(){}
 
-   public function getCodigoJugador()
+     public function getCodigoJugador()
   	{
   		return $this->cod_jugador;
   	}

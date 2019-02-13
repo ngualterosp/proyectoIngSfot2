@@ -15,7 +15,7 @@
   	$elJugador = new Jugador();
   	$elJugador->setCodigoJugador($_POST['cod_jugador']);
   	$elJugador->setCodigoEquipo($_POST['cod_equipo']);
-  	$elJugador->setNombrer($_POST['nom_jugador']);
+  	$elJugador->setNombre($_POST['nom_jugador']);
   	$elJugador->setDorsal($_POST['num_dorsal']);
   	$elJugador->setEdad($_POST['edad']);
   	
@@ -27,7 +27,22 @@
 
   elseif(isset($_POST['insertarJugador']))
   {
-  	$
+  	 $elJugador = new Jugador();
+     $elJugador->setCodigoJugador($_POST['codigoJugadorParam']);
+     $elJugador->setCodigoEquipo($_POST['codigoEquipoParam']);
+     $elJugador->setNombre($_POST['nombreJugadorParam']);
+     $elJugador->setDorsal($_POST['dorsalParam']);
+     $elJugador->setEdad($_POST['edadParam']);
+
+
+     $crud->insertar($elJugador);
+
+  }
+
+  elseif(isset($_POST['eliminarJugador']))
+  {
+    $codigoJugador = $_POST['codigoJugadorParam'];
+    $crud->eliminar($codigoJugador);
   }
 
 

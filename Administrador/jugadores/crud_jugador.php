@@ -13,10 +13,10 @@ require_once('jugador.php');
    		$db=Db::conectar();
    		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, num_dorsal, edad) values(:cod_equipo,:nom_jugador,:ruta_imagen)');
 
-			$insert->bindValue('cod_equipo',$gira->getNombre());
-			$insert->bindValue('nom_jugador',$gira->getDescripcion());
-			$insert->bindValue('num_dorsal',$gira->getRuta());
-			$insert->bindValue('edad',$gira->getRuta());
+			$insert->bindValue('cod_equipo',$jugador->getCodigoEquipo());
+			$insert->bindValue('nom_jugador',$jugador->getNombre());
+			$insert->bindValue('num_dorsal',$jugador->getDorsal());
+			$insert->bindValue('edad',$jugador->getEdad());
 			$insert->execute();
    	}
 
