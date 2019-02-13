@@ -38,7 +38,7 @@
                 <label for="clave">Contraseña</label>
               </div>
             </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+          <div><input name="login" class="btn btn-primary btn-block" type="submit" value = "Login"/></div>
         </form>
       </div>
     </div>
@@ -58,9 +58,6 @@
 <?php
 
     session_start();
-
-
-
 
 
     function verificar_login($user,$password,&$result)  // COMPARAMOS SI EXISTE EL RESULTADO
@@ -112,7 +109,7 @@
                 $_SESSION['cod_admin'] = $result->cod_admin;
 
 
-                   header("location:inicioAdmin.php"); // Acá es el login correcto, y reenviamos
+                   header("location:plantillaAdmin.php"); // Acá es el login correcto, y reenviamos
             }
             else
             {
@@ -122,7 +119,7 @@
 
         ?>
 
-<?php
+      <?php
       }
       else
       {
