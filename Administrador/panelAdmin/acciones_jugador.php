@@ -46,6 +46,13 @@
     $crud->eliminar($codigoJugador);
     header('Location: insertar_jugador.php');
   }
+  elseif($_GET['accion'] =='a')
+  {
+    
+    $codigoJugador = $_GET['codigoJugadorParam'];
+    $crud->eliminar($codigoJugador);
+    header('Location: insertar_jugador.php');
+  }
 
 
 ?>

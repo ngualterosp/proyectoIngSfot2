@@ -31,8 +31,8 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
         <td><?php echo $jugador->getNombre() ?></td>
         <td><?php echo $jugador->getDorsal() ?></td>
         <td><?php echo $jugador->getEdad()?> </td>
-        <td><a href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigo()?>&accion=a">DD</a></td>
-          <td><a href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigo()?>&accion=e">Eliminar</a></td>
+        <td><a href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=a">DD</a></td>
+          <td><a href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=e">Eliminar</a></td>
       </tr>
       <?php } ?>
     </body>
