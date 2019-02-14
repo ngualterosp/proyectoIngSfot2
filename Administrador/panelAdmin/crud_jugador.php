@@ -11,13 +11,15 @@ require_once('jugador.php');
    	public function insertar($jugador)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, num_dorsal, edad) values(:cod_equipo,:nom_jugador,:ruta_imagen)');
+   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, num_dorsal, edad) values(:cod_equipo,:nom_jugador,:num_dorsal,:edad)');
 
 			$insert->bindValue('cod_equipo',$jugador->getCodigoEquipo());
 			$insert->bindValue('nom_jugador',$jugador->getNombre());
 			$insert->bindValue('num_dorsal',$jugador->getDorsal());
 			$insert->bindValue('edad',$jugador->getEdad());
 			$insert->execute();
+
+			
    	}
 
 
@@ -42,7 +44,7 @@ require_once('jugador.php');
 				$myJugador->setCodigoEquipo($jugador['cod_equipo']);
 				$myJugador->setNombre($jugador['nom_jugador']);
 				$myJugador->setDorsal($jugador['num_dorsal']);
-			    $myJugador->setFecha($jugador['edad']);
+			    $myJugador->setEdad($jugador['edad']);
 			    
 				$listaJugadores[]=$myJugador;
 			}

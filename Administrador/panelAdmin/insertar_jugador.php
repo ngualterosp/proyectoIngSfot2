@@ -130,28 +130,45 @@ $crud = new CrudJugador();
 	<div id="form_container">
 
 		<h1><a>Insertar Jugador</a></h1>
-		<form id="form_35166" class="appnitro"  method="post" action="" enctype="multipart/form-data">
+		<form id="form_35166" class="appnitro"  method="post" action="acciones_jugador.php" enctype="multipart/form-data">
 					<div class="form_description">
 			<h2>Insertar Jugador</h2>
 			<p></p>
 		</div>
 			<ul >
-
-					<li id="li_1" >
-		<label class="description" for="nombre">Nombre jugador </label>
+<li id="li_1" >
+    <label class="description" for="equipoParam">Equipo </label>
+    <div>
+      <input id="equipoParam" placeholder="Codigo Equipo" name="equipoParam" class="element text medium form-control" type="text" maxlength="255" value="" required/>
+    </div>
+    </li>
+					<li id="li_2" >
+		<label class="description" for="nombreJugadorParam">Nombre jugador </label>
 		<div>
 			<input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="element text medium form-control" type="text" maxlength="255" value="" required/>
 		</div>
 		</li>
-    <li id="li_4">
-      <div>
-        <input type="file" required name="ruta_imagen"/>
-      </div>
+   
+
+          <li id="li_3" >
+    <label class="description" for="dorsalParam">Dorsal </label>
+    <div>
+      <input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="element text medium form-control" type="text" maxlength="255" value="" required/>
+    </div>
     </li>
+   
+
+          <li id="li_4" >
+    <label class="description" for="edadParam">Edad </label>
+    <div>
+      <input id="edadParam" placeholder="Nombre Jugador" name="edadParam" class="element text medium form-control" type="text" maxlength="255" value="" required/>
+    </div>
+    </li>
+   
 
 				<center>
 			  <input type="hidden" name="form_id" value="35166" />
-				<input id="saveForm" class="btn btn-primary" type="submit" name="submit" value="Agregar" />
+				<input id="insertarJugador" class="btn btn-primary" type="submit" name="insertarJugador" value="Agregar" />
         <a href="tiendaAdmin.php"> Volver </a>
 			</center>
 			</ul>

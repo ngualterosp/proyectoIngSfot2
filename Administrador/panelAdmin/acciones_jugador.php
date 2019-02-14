@@ -28,8 +28,7 @@
   elseif(isset($_POST['insertarJugador']))
   {
   	 $elJugador = new Jugador();
-     $elJugador->setCodigoJugador($_POST['codigoJugadorParam']);
-     $elJugador->setCodigoEquipo($_POST['codigoEquipoParam']);
+     $elJugador->setCodigoEquipo($_POST['equipoParam']);
      $elJugador->setNombre($_POST['nombreJugadorParam']);
      $elJugador->setDorsal($_POST['dorsalParam']);
      $elJugador->setEdad($_POST['edadParam']);
@@ -37,12 +36,15 @@
 
      $crud->insertar($elJugador);
 
+     header('Location: insertar_jugador.php');
+
   }
 
-  elseif(isset($_POST['eliminarJugador']))
+  elseif($_GET['accion'] =='e')
   {
-    $codigoJugador = $_POST['codigoJugadorParam'];
+    $codigoJugador = $_GET['codigoJugadorParam'];
     $crud->eliminar($codigoJugador);
+    header('Location: insertar_jugador.php');
   }
 
 
