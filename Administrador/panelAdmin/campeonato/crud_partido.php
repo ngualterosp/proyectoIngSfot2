@@ -39,12 +39,11 @@ require_once('partido.php');
 
 
 				$myPartido= new Partido();
-				$myPartido->setCodigoJugador($jugador['cod_jugador']);
+				$myPartido->setCodigoEquipoLocal($partido['cod_local']);
 
-				$myPartido->setCodigoEquipo($jugador['cod_equipo']);
-				$myPartido->setNombre($jugador['nom_jugador']);
-				$myPartido->setDorsal($jugador['num_dorsal']);
-			    $myPartido->setEdad($jugador['edad']);
+				$myPartido->setCodigoEquipoVis($partido['cod_rival']);
+				$myPartido->setCodigoJuez($partido['cod_juez']);
+				$myPartido->setCodigoEstado($partido['cod_estado']);
 			    
 				$listaPartidos[]=$myPartido;
 			}
