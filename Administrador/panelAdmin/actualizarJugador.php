@@ -6,177 +6,122 @@
 	$jugador=new Jugador();
 	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
 	$jugador=$crud->obtenerJugador($_GET['cod_jugador']);
-	
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="view.css" media="all">
-		<script type="text/javascript" src="view.js"></script>
-		<script type="text/javascript" src="calendar.js"></script>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Administrador</title>
-
-    <!-- Bootstrap core CSS-->
-    <link href="../../vendor1/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template-->
-    <link href="../../vendor1/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Page level plugin CSS-->
-    <link href="../../vendor1/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="../../css/sb-admin.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
-      <a class="navbar-brand mr-1" href="../../inicioAdmin.php">🐰 BadBunny 🐰</a>
+<head>
 
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-      <!-- Navbar Search -->
-      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Buscar" aria-label="Search" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
+  <title>Administrator</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../../css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="plantillaAdmin.php">Soccer League</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-      </form>
+      </div>
+    </form>
 
-      <!-- Navbar -->
-      <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="nav-item dropdown no-arrow">
-          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user-circle fa-fw"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../../index.php">Cerrar Sesion</a>
-          </div>
-        </li>
-      </ul>
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="../../plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
+        </div>
+      </li>
+    </ul>
 
-    </nav>
+  </nav>
 
-    <div id="wrapper">
+  <div id="wrapper">
 
-      <!-- Sidebar -->
-      <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="../../inicioAdmin.php">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="../../noticias/noticiasAdmin.php">
-            <i class="fa fa-newspaper-o"></i>
-            <span>Noticias</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="../../giras/girasAdmin.php">
-            <i class="fa fa-plane"></i>
-            <span>Giras</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="../prensa/ruedasAdmin.php">
-            <i class="fa fa-microphone"></i>
-            <span>Rueda de prensa</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="tiendaAdmin.php">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Tienda</span>
-          </a>
-        </li>
-				<li class="nav-item active">
-          <a class="nav-link" href="../../live.php">
-            <i class="fa fa-video-camera"></i>
-            <span>Live</span>
-          </a>
-        </li>
-      </ul>
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaAdmin.php">
+          <i class="fa fa-home"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaEquipos.php">
+          <i class="fa fa-users"></i>
+          <span>Equipos</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaJuez.php">
+          <i class="fa fa-eye"></i>
+          <span>Arbitros</span>
+        </a>
+      </li>
+    </ul>
 
-			<div id="content-wrapper">
+    <div id="content-wrapper">
 
-				<img id="top" src="../../top.png" alt="">
-					<div id="form_container">
+						<div class="w3-container w3-black">
+			        <center><h2>Modificar Jugador</h2></center>
+			      </div>
 
-						<h1><a>Modificar producto</a></h1>
-			<form action='acciones_jugador.php' method='post'>
-							<div class="form_description">
-					<h2>Modificar producto</h2>
-					<p></p>
-				</div>
+						<form action='acciones_jugador.php' method='post'>
+						  <br><br>
+						<p>
+						<input type="hidden" name="cod_jugador" value='<?php echo $jugador->getCodigoJugador() ?>'>
+						<input type="hidden" name="cod_equipo" value='<?php echo $jugador->getCodigoEquipo() ?>'>
+						</p>
+						<p>
+						<label>Nombre Jugador:</label>
+						<input value='<?php echo $jugador->getNombre()?>' name="nom_jugador" class="w3-input" type="text"></p>
+						<p>
+						<label>Dorsal:</label>
+						<input value='<?php echo $jugador->getDorsal()?>' name="num_dorsal" class="w3-input" type="text"></p>
+						<p>
+						<label>Edad:</label>
+						<input value='<?php echo $jugador->getEdad()?>' name="edad" class="w3-input" type="text"></p>
 
-		<input type="hidden" name="cod_jugador" value='<?php echo $jugador->getCodigoJugador() ?>'>
-        <input type="hidden" name="cod_equipo" value='<?php echo $jugador->getCodigoEquipo() ?>'>
+						<center><button type="submit" value="Modificar" name="actualizarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Modificar</button></center>
 
-		
-		<li id="li_1" >
-			<label class="description" for="nom_jugador">Nombre Jugador </label>
-			<div>
-				<input type='text' class="element text medium form-control" maxlength="255" name='nom_jugador' required value='<?php echo $jugador->getNombre()?>'>
-			</div>
-		</li>
+						</form>
 
-    <li id="li_2">
-      <label class="description" for="equipo">Equipo </label>
-      <div>
-    
-    </div>
-    </li>
-
-		<li id="li_3" >
-			<label class="description" for="num_dorsal">Dorsal </label>
-			<div>
-				<input type='text'  class="element text medium form-control" name='num_dorsal' required value='<?php echo $jugador->getDorsal()?>' >
-			</div>
-		</li>
-		<li id="li_4" >
-			<label class="description" for="edad">Edad </label>
-			<div>
-				<input type="text" name="edad" required placeholder="Valor" class="element text medium form-control"
-				 id="edad" value="<?php echo $jugador->getEdad()?>" onkeypress="return filterFloat(event,this);"/>
-			</div>
-		</li>
-   
-    </li>
-
-
-	<center>
-	<input type='hidden' name='actualizarJugador' value='actualizarJugador'>
-	<input class="btn btn-primary " type="submit" value="Modificar" />
-	<a href="tiendaAdmin.php"> Volver </a>
-	</center>
-
-						<div id="footer">
-
-						</div>
 					</div>
-					<img id="bottom" src="../../bottom.png" alt="">
 
 
 
