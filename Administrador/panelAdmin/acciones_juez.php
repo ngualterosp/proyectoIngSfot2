@@ -24,11 +24,8 @@
  elseif(isset($_POST['insertarJuez']))
   {
     $elJuez = new Juez();
-    $elJuez->setCodigoJuez($_POST['cod_juez']);
     $elJuez->setNombreJuez($_POST['nom_juez']);   
-
-
-     $crud->insertar($elJuez);
+    $crud->insertar($elJuez);
 
      header('Location: mostrar_juez.php');
 
