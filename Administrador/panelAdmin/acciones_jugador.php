@@ -18,7 +18,7 @@
   	$elJugador->setNombre($_POST['nom_jugador']);
   	$elJugador->setDorsal($_POST['num_dorsal']);
   	$elJugador->setEdad($_POST['edad']);
-  	
+
 
   	$crud->modificarJugador($elJugador);
 
@@ -36,7 +36,7 @@
 
      $crud->insertar($elJugador);
 
-     header('Location: insertar_jugador.php');
+     header('Location: insertarJugador.php');
 
   }
 
@@ -44,14 +44,14 @@
   {
     $codigoJugador = $_GET['codigoJugadorParam'];
     $crud->eliminar($codigoJugador);
-    header('Location: insertar_jugador.php');
+    header('Location: insertarJugador.php');
   }
   elseif($_GET['accion'] =='a')
   {
-    
+
     $codigoJugador = $_GET['codigoJugadorParam'];
     $crud->eliminar($codigoJugador);
-    header('Location: insertar_jugador.php');
+    header('Location: insertarJugador.php');
   }
 
 
