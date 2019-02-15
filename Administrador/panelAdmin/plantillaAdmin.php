@@ -75,12 +75,6 @@
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="plantillaEstadios.php">
-          <i class="fa fa-map-pin"></i>
-          <span>Estadios</span>
-        </a>
-      </li>
-      <li class="nav-item active">
         <a class="nav-link" href="plantillaJuez.php">
           <i class="fa fa-eye"></i>
           <span>Arbitros</span>
