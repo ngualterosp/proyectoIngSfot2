@@ -8,6 +8,25 @@ require_once('jugador.php');
 
 
 
+
+    public function obtenerJugador($codJugador)
+    {
+    	 $db=Db::conectar();
+    	 $select=$db->prepare('SELECT * FROM jugador WHERE cod_jugador=:cod_jugador');
+    	 $select->bindValue('cod_jugador',$codJugador);
+    	 $select->execute();
+    	 $jugador=$select->fetch();
+    	 $elJugador = new Jugador();
+    	 $elJugador->setCodigoJugador($jugador['cod_jugador']);
+    	 $elJugador->setCodigoEquipo($jugador['cod_equipo']);
+    	 $elJugador->setNombre($jugador['nom_jugador']);
+    	 $elJugador->setDorsal($jugador['dorsal']);
+    	 $elJugador->setEdad($jugador['edad']);
+
+    	 return $elJugador;
+
+
+    }
    	public function insertar($jugador)
    	{
    		$db=Db::conectar();

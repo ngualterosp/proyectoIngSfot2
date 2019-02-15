@@ -48,10 +48,8 @@
   }
   elseif($_GET['accion'] =='a')
   {
-
     $codigoJugador = $_GET['codigoJugadorParam'];
-    $crud->eliminar($codigoJugador);
-    header('Location: insertarJugador.php');
+    header('Location: actualizarJugador.php?cod_jugador=<?php echo $codigoJugador ?>' );
   }
 
 
