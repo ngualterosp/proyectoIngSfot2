@@ -11,7 +11,7 @@ require_once('jugador.php');
    	public function insertar($jugador)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, num_dorsal, edad) values(:cod_equipo,:nom_jugador,:num_dorsal,:edad)');
+   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, dorsal, edad) values(:cod_equipo,:nom_jugador,:num_dorsal,:edad)');
 
 			$insert->bindValue('cod_equipo',$jugador->getCodigoEquipo());
 			$insert->bindValue('nom_jugador',$jugador->getNombre());
@@ -43,7 +43,7 @@ require_once('jugador.php');
 
 				$myJugador->setCodigoEquipo($jugador['cod_equipo']);
 				$myJugador->setNombre($jugador['nom_jugador']);
-				$myJugador->setDorsal($jugador['num_dorsal']);
+				$myJugador->setDorsal($jugador['dorsal']);
 			    $myJugador->setEdad($jugador['edad']);
 			    
 				$listaJugadores[]=$myJugador;
@@ -62,7 +62,7 @@ require_once('jugador.php');
 	public function modificarJugador($jugador)
 	{
 		$db=Db::conectar();
-		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, num_dorsal =:num_dorsal, edad=:edad WHERE cod_jugador =:cod_jugador');
+		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, dorsal =:num_dorsal, edad=:edad WHERE cod_jugador =:cod_jugador');
 		$modificar->bindValue('cod_jugador', $jugador->getCodigoJugador());
 		$modificar->bindValue('cod_equipo', $jugador->getCodigoEquipo());
 		$modificar->bindValue('nom_jugador', $jugador->getNombre());
