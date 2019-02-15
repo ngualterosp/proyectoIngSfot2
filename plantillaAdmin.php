@@ -68,6 +68,18 @@
           <span>Inicio</span>
         </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaEquipos.php">
+          <i class="fa fa-users"></i>
+          <span>Equipos</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaEstadios.php">
+          <i class="fa fa-map-pin"></i>
+          <span>Estadios</span>
+        </a>
+      </li>
     </ul>
 
     <div id="content-wrapper">
