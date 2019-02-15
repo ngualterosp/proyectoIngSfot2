@@ -1,3 +1,15 @@
+<?php
+session_start();
+require_once "conexion.php";
+require_once "crud_jugador.php";
+
+$crud = new CrudJugador();
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +26,13 @@
   <title>Administrator</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="../../css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -93,49 +105,46 @@
     <div id="content-wrapper">
 
       <div class="w3-container w3-black">
-        <center><h2>Insertar Arbitro</h2></center>
+        <center><h2>Insertar Jugador</h2></center>
       </div>
 
-<form class="w3-container">
+<form id="form_35166" method="post" action="acciones_jugador.php" enctype="multipart/form-data" class="w3-container">
   <br><br>
+  <p>
+  <label>Codigo Equipo:</label>
+  <input id="equipoParam" placeholder="Codigo Equipo" name="equipoParam" class="w3-input" type="text"></p>
+  <p>
 <p>
-<label>Nombre Arbitro:</label>
-<input class="w3-input" type="text"></p>
+<label>Nombre Jugador:</label>
+<input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
+<p>
+<label>Dorsal:</label>
+<input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
+<p>
+<label>Edad:</label>
+<input id="edadParam" placeholder="Nombre Jugador" name="edadParam" class="w3-input" type="text"></p>
 
-<center><button class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
+<center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
 
 </form>
 
 						<div id="segundaCapa">
-							<?php
-							        $conn = mysqli_connect("localhost","root", "", "badbunny");
-				             // Check connection
-				                    if (!$conn) {
-				                    die("Connection failed: " . mysqli_connect_error());
-				                    }
 
-				                    if(isset($_POST['titular']))
-				                    {
-				                          $titularVar=$_POST['titular'];
-				                          $entradaVar=$_POST['entrada'];
-				                          $cod_admin=$_SESSION['cod_admin'];
+              <?php
+            			        $db = Db::conectar();
+                                if(isset($_POST['nom_categoria']))
+                                {
+                                      $nombreVar=$_POST['nom_categoria'];
+                                      $categoria = new Categoria();
+                                      $categoria->setNombre($nombreVar);
+                                      $categoria->setRuta(addslashes(file_get_contents($_FILES['ruta_imagen']['tmp_name'])));
+
+                                      $crud->insertarCategoria($categoria);
 
 
-				                     $sql = "INSERT into noticia(titular_noticia, entrada_noticia, cod_admin) values ('$titularVar','$entradaVar',1)";
+                                }
 
-				                          if($conn->query($sql) == true)
-				                          {
-				                          	echo "Dato insertado correctamente";
-				                          }
-				                          else
-				                          {
-				                          	echo $cod_admin;
-				                          	echo "Error";
-				                          }
-
-				                    }
-
-							?>
+                                ?>
 
 						</div>
 
@@ -178,23 +187,23 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../../vendor/chart.js/Chart.min.js"></script>
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../../js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="../../js/demo/datatables-demo.js"></script>
+    <script src="../../js/demo/chart-area-demo.js"></script>
 
   </body>
 
