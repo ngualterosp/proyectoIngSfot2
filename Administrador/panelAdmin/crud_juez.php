@@ -11,9 +11,8 @@ require_once('juez.php');
    	public function insertar($juez)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO juez(nom_juez) values(:nom_juez)');
+   		$insert=$db->prepare('INSERT INTO juez( nom_juez) values(:nom_juez)');
 
-			
 			$insert->bindValue('nom_juez',$juez->getNombreJuez());
 			$insert->execute();
 
