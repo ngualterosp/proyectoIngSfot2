@@ -129,18 +129,18 @@ $crud = new CrudJugador();
 				<img id="top" src="top.png" alt="">
 	<div id="form_container">
 
-		<h1><a>Insertar Juez</a></h1>
-		<form id="form_35166" class="appnitro"  method="post" action="acciones_juez.php" enctype="multipart/form-data">
+		<h1><a>Insertar Equipo</a></h1>
+		<form id="form_35166" class="appnitro"  method="post" action="acciones_equipo.php" enctype="multipart/form-data">
 					<div class="form_description">
-			<h2>Insertar Juez</h2>
+			<h2>Insertar Equipo</h2>
 			<p></p>
 		</div>
 			<ul >
 
 					<li id="li_2" >
-		<label class="description" for="nom_juez">Nombre juez </label>
+		<label class="description" for="nom_equipo">Nombre Equipo </label>
 		<div>
-			<input id="nom_juez" placeholder="Nombre Juez" name="nom_juez" class="element text medium form-control" type="text" maxlength="255" value="" required/>
+			<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="element text medium form-control" type="text" maxlength="255" value="" required/>
 		</div>
 		</li>
    
@@ -148,7 +148,7 @@ $crud = new CrudJugador();
 
 				<center>
 			  <input type="hidden" name="form_id" value="35166" />
-				<input id="insertarJuez" class="btn btn-primary" type="submit" name="insertarJuez" value="Agregar" />
+				<input id="insertarEquipo" class="btn btn-primary" type="submit" name="insertarEquipo" value="Agregar" />
         <a href="tiendaAdmin.php"> Volver </a>
 			</center>
 			</ul>
@@ -156,21 +156,6 @@ $crud = new CrudJugador();
 
 <div id= segundaCapa>
 
-	<?php
-			        $db = Db::conectar();
-                    if(isset($_POST['nom_categoria']))
-                    {
-                          $nombreVar=$_POST['nom_categoria'];
-                          $categoria = new Categoria();
-                          $categoria->setNombre($nombreVar);
-                          $categoria->setRuta(addslashes(file_get_contents($_FILES['ruta_imagen']['tmp_name'])));
-
-                          $crud->insertarCategoria($categoria);
-
-
-                    }
-
-                    ?>
 
 </div>
 
