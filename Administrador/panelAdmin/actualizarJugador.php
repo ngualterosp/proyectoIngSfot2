@@ -125,7 +125,7 @@
 					<div id="form_container">
 
 						<h1><a>Modificar producto</a></h1>
-			<form action='acciones_producto.php' method='post'>
+			<form action='acciones_jugador.php' method='post'>
 							<div class="form_description">
 					<h2>Modificar producto</h2>
 					<p></p>
@@ -136,9 +136,9 @@
 
 		
 		<li id="li_1" >
-			<label class="description" for="categoria">Nombre Jugador </label>
+			<label class="description" for="nom_jugador">Nombre Jugador </label>
 			<div>
-				<input type='text' class="element text medium form-control" maxlength="255" name='nombre' required value='<?php echo $jugador->getNombre()?>'>
+				<input type='text' class="element text medium form-control" maxlength="255" name='nom_jugador' required value='<?php echo $jugador->getNombre()?>'>
 			</div>
 		</li>
 
@@ -150,23 +150,19 @@
     </li>
 
 		<li id="li_3" >
-			<label class="description" for="categoria">Dorsal </label>
+			<label class="description" for="num_dorsal">Dorsal </label>
 			<div>
-				<input type='text'  class="element text medium form-control" name='descripcion' required value='<?php echo $producto->getDescripcion()?>' >
+				<input type='text'  class="element text medium form-control" name='num_dorsal' required value='<?php echo $jugador->getDorsal()?>' >
 			</div>
 		</li>
 		<li id="li_4" >
-			<label class="description" for="categoria">Edad </label>
+			<label class="description" for="edad">Edad </label>
 			<div>
-				<input type="text" name="valor" required placeholder="Valor" class="element text medium form-control"
-				 id="valor" value="<?php echo $producto->getValor()?>" onkeypress="return filterFloat(event,this);"/>
+				<input type="text" name="edad" required placeholder="Valor" class="element text medium form-control"
+				 id="edad" value="<?php echo $jugador->getEdad()?>" onkeypress="return filterFloat(event,this);"/>
 			</div>
 		</li>
-    <li id="li_5" >
-      <label class="description" for="cantidad">Equipo </label>
-      <div>
-				<input placeholder="cantidad" type="number" class="element text medium form-control" name="cantidad" min="1" max="10000" required value='<?php echo $producto->getCantidad()?>'>
-      </div>
+   
     </li>
 
 
