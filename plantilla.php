@@ -16,7 +16,7 @@
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-home"> Inicio</a>
   <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Estadisticas </a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-globe"> Estadios</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white 	fa fa-line-chart"> Clasificación</a>
+  <!--<a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white 	fa fa-line-chart"> Clasificación</a>-->
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-phone"> Contactos</a>
  </div>
 
@@ -50,20 +50,20 @@
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
+  <img src="img/usu2.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Lionel Messi</h3>
   <p>Delantero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
+  <img src="img/usu3.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Kilian Mbappe</h3>
   <p>Delantero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
+  <img src="img/usu4.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Toloza</h3>
   <p>Delantero</p>
 </div>
 
@@ -76,27 +76,27 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
+  <img src="img/usu5.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Juanfe Quintero</h3>
+  <p>Volante</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu2.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Lionel Messi</h3>
   <p>Delantero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu6.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Ngolo Kante</h3>
+  <p>Volante</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu7.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Luka Modric</h3>
+  <p>Volante</p>
 </div>
 
 </div>
@@ -108,27 +108,27 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu8.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cortois</h3>
+  <p>Portero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu9.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>David De gea</h3>
+  <p>Portero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu10.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Manuel Neuer</h3>
+  <p>Portero</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
+  <img src="img/usu11.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Rufay Zapata</h3>
+  <p>Portero</p>
 </div>
 
 </div>
@@ -184,66 +184,7 @@ encuentros dentro de este campeonato. Contamos con la verificación de la FIFA.
 </div>
 
 <!-- Pricing Row -->
-<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-    <h2>PRICING</h2>
-    <p>Choose a pricing plan that fits your needs.</p><br>
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Basic</p>
-        </li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
 
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme-l2">
-          <p class="w3-xlarge">Pro</p>
-        </li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Premium</p>
-        </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-</div>
 
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
