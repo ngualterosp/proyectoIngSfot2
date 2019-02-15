@@ -14,7 +14,7 @@
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="login.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-unlock-alt w3-margin-right"></i>Login</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-home"> Inicio</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Goleadores</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Estadisticas </a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-globe"> Estadios</a>
   <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white 	fa fa-line-chart"> Clasificación</a>
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-phone"> Contactos</a>
@@ -39,8 +39,71 @@
 
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>GOLEADORES</h2>
-<p>Torneo Oficial</p>
+<h2>MÁXIMOS GOLEADORES</h2>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+</div>
+</div>
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>MÁXIMOS ASISTENTES</h2>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cristiano Ronaldo</h3>
+  <p>Delantero</p>
+</div>
+
+</div>
+</div>
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>MALLAS MENOS VENCIDA</h2>
 
 <div class="w3-row"><br>
 
@@ -75,8 +138,11 @@
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
 <div class="w3-quarter">
-<h2>Our Work</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2>Estadios de la liga</h2>
+<p>
+A continuación estan las imágenes e información de los estadios en donde se jugarán los partidos de nuestra liga. Todos con las mejores condiciones para recibir los
+encuentros dentro de este campeonato. Contamos con la verificación de la FIFA.
+</p>
 </div>
 
 <div class="w3-quarter">
