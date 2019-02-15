@@ -4,9 +4,8 @@
  class Equipo{
    private $cod_equipo;
    private $nom_equipo;
-   private $cod_estadio;
 
-   function __construct()
+   function __construct(){}
 
    public function getCodigoEquipo()
   	{
@@ -27,15 +26,7 @@
   	{
   		$this->nom_equipo = $nuevoNom;
   	}
-  	public function getCodigoEstadio()
-  	{
-  		return $this->cod_estadio;
-  	}
 
-  	public function setCodigoEstadio($nuevaCodEstadio)
-  	{
-  		$this->cod_estadio = $nuevaCodEstadio;
-  	}
 
 }
 

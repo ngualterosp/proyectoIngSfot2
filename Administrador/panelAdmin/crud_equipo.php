@@ -12,11 +12,9 @@ require_once('equipo.php');
    	public function insertar($equipo)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO equipo(cod_equipo, nom_equipo, cod_estadio) values(:cod_equipo,:nom_equipo,:cod_estadio)');
+   		$insert=$db->prepare('INSERT INTO equipo( nom_equipo) values(:nom_equipo)');
 
-			$insert->bindValue('cod_equipo',$equipo->getCodigoEquipo());
 			$insert->bindValue('nom_equipo',$equipo->getNombreEquipo());
-			$insert->bindValue('cod_estadio',$equipo->getCodigoEstadio());
 			$insert->execute();
    	}
 
@@ -38,7 +36,6 @@ require_once('equipo.php');
 				$myEquipo= new Equipo();
 				$myEquipo->setCodigoEquipo($equipo['cod_equipo']);
 				$myEquipo->setNombreEquipo($equipo['nom_equipo']);
-				$myEquipo->setCodigoEstadio($equipo['cod_estadio']);
 			    
 				$listaEquipos[]=$myEquipo;
 			}
@@ -56,10 +53,9 @@ require_once('equipo.php');
 	public function modificarJugador($equipo)
 	{
 		$db=Db::conectar();
-		$modificar = $db ->prepare('UPDATE equipo SET nom_equipo=:nom_equipo, cod_estadio=:cod_estadio WHERE cod_equipo =:cod_equipo');
+		$modificar = $db ->prepare('UPDATE equipo SET nom_equipo=:nom_equipo WHERE cod_equipo =:cod_equipo');
 		$modificar->bindValue('cod_equipo', $equipo->getCodigoEquipo());
 		$modificar->bindValue('nom_equipo', $equipo->getNombreEquipo());
-		$modificar->bindValue('cod_estadio', $equipo->getCodigoEstadio());
 
 		$modificar->execute();
 	}
