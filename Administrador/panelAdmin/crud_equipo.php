@@ -36,7 +36,7 @@ require_once('equipo.php');
 				$myEquipo= new Equipo();
 				$myEquipo->setCodigoEquipo($equipo['cod_equipo']);
 				$myEquipo->setNombreEquipo($equipo['nom_equipo']);
-			    
+
 				$listaEquipos[]=$myEquipo;
 			}
 			return $listaEquipos;
@@ -59,6 +59,18 @@ require_once('equipo.php');
 
 		$modificar->execute();
 	}
+
+  public function obtenerEquipo($codigoEquipo){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM equipo WHERE cod_equipo=:elCodigo');
+			$select->bindValue('elCodigo',$codigoEquipo);
+			$select->execute();
+			$equipo=$select->fetch();
+			$myEquipo= new Equipo();
+			$myEquipo->setCodigoEquipo($equipo['$cod_equipo']);
+			$myEquipo->setNombreEquipo($equipo['nom_equipo']);
+			return $myEquipo;
+		}
 
 
 

@@ -39,7 +39,7 @@
   {
     $codigoEquipo = $_GET['codigoEquipoParam'];
     $crud->eliminar($codigoEquipo);
-    header('Location: mostrar_equipo.php');
+    header('Location: plantillaEquipos.php');
   }
 
   elseif($_GET['accion'] =='a')

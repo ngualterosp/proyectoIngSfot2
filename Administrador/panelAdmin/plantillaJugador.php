@@ -106,7 +106,7 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
 
 
       <form action="" method="get">
-      <a class="btn btn-primary " href="insertarJugardor.php">Insertar Jugador</a>
+      <a class="btn btn-primary " href="insertarJugador.php">Insertar Jugador</a>
 
 
 

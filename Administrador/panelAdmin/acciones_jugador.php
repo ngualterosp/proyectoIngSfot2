@@ -36,7 +36,7 @@
 
      $crud->insertar($elJugador);
 
-     header('Location: insertarJugador.php');
+     header('Location: plantillaEquipos.php');
 
   }
 
@@ -44,7 +44,7 @@
   {
     $codigoJugador = $_GET['codigoJugadorParam'];
     $crud->eliminar($codigoJugador);
-    header('Location: insertarJugador.php');
+    header('Location: plantillaEquipos.php');
   }
   elseif($_GET['accion'] =='a')
   {
