@@ -65,7 +65,7 @@ $crud = new CrudJugador();
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
+          <a class="dropdown-item" href="../../plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
         </div>
       </li>
     </ul>
@@ -122,7 +122,7 @@ $crud = new CrudJugador();
 <input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
 <p>
 <label>Edad:</label>
-<input id="edadParam" placeholder="Nombre Jugador" name="edadParam" class="w3-input" type="text"></p>
+<input id="edadParam" placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
 
 <center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
 

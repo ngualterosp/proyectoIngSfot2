@@ -63,7 +63,7 @@ $crud = new CrudJuez();
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
+          <a class="dropdown-item" href="../../plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
         </div>
       </li>
     </ul>

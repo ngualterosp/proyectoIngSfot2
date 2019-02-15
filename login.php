@@ -63,7 +63,7 @@
     function verificar_login($user,$password,&$result)  // COMPARAMOS SI EXISTE EL RESULTADO
     {
 
-    	$conn = mysqli_connect("localhost","root", "", "badbunny");
+    	$conn = mysqli_connect("localhost","root", "", "soccerleague");
     if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
@@ -109,7 +109,7 @@
                 $_SESSION['cod_admin'] = $result->cod_admin;
 
 
-                   header("location:plantillaAdmin.php"); // Acá es el login correcto, y reenviamos
+                   header("location:Administrador/panelAdmin/plantillaAdmin.php"); // Acá es el login correcto, y reenviamos
             }
             else
             {

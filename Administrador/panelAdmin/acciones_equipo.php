@@ -15,7 +15,7 @@
   	$elEquipo = new Equipo();
   	$elEquipo->setCodigoEquipo($_POST['cod_equipo']);
   	$elEquipo->setNombreEquipo($_POST['nom_equipo']);
-  	
+
 
   	$crud->modificarJugador($elEquipo);
 
@@ -31,7 +31,7 @@
 
      $crud->insertar($elEquipo);
 
-     header('Location: insertar_equipo.php');
+     header('Location: plantillaEquipos.php');
 
   }
 

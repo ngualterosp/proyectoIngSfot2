@@ -1,3 +1,17 @@
+<?php
+//incluye la clase noticia y Crudnoticia
+require_once('crud_jugador.php');
+require_once('jugador.php');
+$crud=new CrudJugador();
+$jugador= new Jugador();
+//obtiene todos las noticias con el método mostrar de la clase crud
+$codigoEquipo = $_GET['cod_equipo'];
+$listaJugadores=$crud->mostrar($codigoEquipo);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +26,13 @@
   <title>Administrator</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="../../css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +65,7 @@
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
+          <a class="dropdown-item" href="../../plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
         </div>
       </li>
     </ul>
@@ -98,41 +112,33 @@
 
 
       <form action="" method="get">
-      <input name="insert" class="btn btn-primary " type="submit" value = "Insertar Jugador" />
+      <a class="btn btn-primary " href="insertarJugardor.php">Insertar Jugador</a>
 
 
 
 
        <br></br>
-        <table class="table table-striped">
 
-        		<thead>
-        		<tr>
-        			<th>Nombre Jugador</th>
-              <th>Dorsal</th>
-              <th>Edad</th>
-              <th>Modificar</th>
-              <th>Eliminar</th>
-        		</tr>
-        		</thead>
-
-
-         <?php foreach ($listaGira as $gira){ // aca puedes hacer la consulta e iterarla con each. ?>
-        <tr>
-          <td><?php echo $gira->getNombre() // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
-            <td><?php echo $gira->getDescripcion() ?></td>
-            <td><?php echo $gira->getFecha() ?></td>
-            <td><a  class="btn btn-primary" href="../Modelos/gira/actualizar.php?cod_gira=<?php echo $gira->getCodigoGira() ?>&accion=a">Modificar</a></td>
-            <td><a  class="btn btn-primary " href="../Modelos/gira/administrar_gira.php?cod_gira=<?php echo $gira->getCodigoGira()?>&accion=e" />Eliminar</td>
-            <td><a  class="btn btn-primary " href="../Modelos/gira/eventosXgira.php?cod_gira=<?php echo $gira->getCodigoGira()?>" />Eventos Asociados</td>
-        </tr>
-        <?php
-          }
-        ?>
-
-
-
-      </table>
+       <table class="table table-striped">
+         <head>
+           <td>Nombre Jugador</td>
+           <td>Dorsal</td>
+           <td>Edad</td>
+           <td>Actualizar</td>
+           <td>Eliminar</td>
+         </head>
+         <body>
+           <?php foreach ($listaJugadores as $jugador) {?>
+           <tr>
+             <td><?php echo $jugador->getNombre() ?></td>
+             <td><?php echo $jugador->getDorsal() ?></td>
+             <td><?php echo $jugador->getEdad()?> </td>
+             <td><a class="btn btn-primary" href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=a">Modificar</a></td>
+             <td><a class="btn btn-primary" href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=e">Eliminar</a></td>
+           </tr>
+           <?php } ?>
+         </body>
+       </table>
 
     </form>
 
@@ -176,23 +182,23 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="../../vendor/chart.js/Chart.min.js"></script>
+  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
+  <script src="../../js/sb-admin.min.js"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="../../js/demo/datatables-demo.js"></script>
+  <script src="../../js/demo/chart-area-demo.js"></script>
 
 </body>
 
