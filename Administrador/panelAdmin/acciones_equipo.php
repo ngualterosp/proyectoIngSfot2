@@ -27,6 +27,7 @@
     $elEquipo = new Equipo();
 
     $elEquipo->setNombreEquipo($_POST['nom_equipo']);
+    $elEquipo->setEscudo(addslashes(file_get_contents($_FILES['escudo']['tmp_name'])));
 
 
      $crud->insertar($elEquipo);

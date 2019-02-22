@@ -106,6 +106,9 @@ $crud = new CrudJuez();
 <label>Nombre Arbitro:</label>
 <input id="nom_juez" placeholder="Nombre Juez" name="nom_juez" class="w3-input" type="text"></p>
 
+<p>
+<input type="file" required name="foto"/></p>
+
 <center><button id="insertarJuez" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="insertarJuez">Insertar</button></center>
 
 </form>

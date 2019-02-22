@@ -4,6 +4,7 @@
  class Juez{
    private $cod_juez;
    private $nom_juez;
+   private $foto;
 
    function __construct(){}
 
@@ -26,7 +27,17 @@
   	{
   		$this->nom_juez = $nomJuez;
   	}
-  
+
+    public function getFoto()
+  	{
+  		return $this->foto;
+  	}
+
+  	public function setFoto($nuevaFoto)
+  	{
+  		$this->foto = $nuevaFoto;
+  	}
+
 
  }
 

@@ -12,9 +12,9 @@ require_once('equipo.php');
    	public function insertar($equipo)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO equipo( nom_equipo) values(:nom_equipo)');
-
+   		$insert=$db->prepare('INSERT INTO equipo( nom_equipo, escudo) values(:nom_equipo,:escudo)');
 			$insert->bindValue('nom_equipo',$equipo->getNombreEquipo());
+      $insert->bindValue('escudo',$equipo->getEscudo());
 			$insert->execute();
    	}
 

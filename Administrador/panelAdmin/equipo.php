@@ -4,6 +4,7 @@
  class Equipo{
    private $cod_equipo;
    private $nom_equipo;
+   private $escudo;
 
    function __construct(){}
 
@@ -27,6 +28,15 @@
   		$this->nom_equipo = $nuevoNom;
   	}
 
+    public function getEscudo()
+  	{
+  		return $this->escudo;
+  	}
+
+  	public function setEscudo($nuevoEscudo)
+  	{
+  		$this->escudo = $nuevoEscudo;
+  	}
 
 }
 

@@ -117,6 +117,8 @@ $crud = new CrudJugador();
 <p>
 <label>Edad:</label>
 <input id="edadParam" placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
+<p>
+<input type="file" required name="fotoParam"/></p>
 
 <center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
 

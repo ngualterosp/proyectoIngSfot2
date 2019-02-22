@@ -2,18 +2,17 @@
 
 require_once('conexion.php');
 require_once('juez.php');
-   class CrudJuez{
+
+  class CrudJuez{
 
    	public function __construct(){}
-
-
 
    	public function insertar($juez)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO juez( nom_juez) values(:nom_juez)');
-
+   		$insert=$db->prepare('INSERT INTO juez(nom_juez, foto) values(:nom_juez,:foto)');
 			$insert->bindValue('nom_juez',$juez->getNombreJuez());
+      $insert->bindValue('foto',$juez->getFoto());
 			$insert->execute();
 
 
