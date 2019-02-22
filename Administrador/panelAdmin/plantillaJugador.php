@@ -1,11 +1,16 @@
 <?php
 //incluye la clase noticia y Crudnoticia
 require_once('crud_jugador.php');
+require_once('crud_equipo.php');
 require_once('jugador.php');
 $crud=new CrudJugador();
+$crudEquipo = new CrudEquipo();
+$equipo = new Equipo();
 $jugador= new Jugador();
 //obtiene todos las noticias con el método mostrar de la clase crud
 $codigoEquipo = $_GET['cod_equipo'];
+
+$equipo = $crudEquipo->obtenerEquipo($codigoEquipo);
 $listaJugadores=$crud->mostrar($codigoEquipo);
 
 
@@ -106,7 +111,7 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
 
 
       <form action="" method="get">
-      <a class="btn btn-primary " href="insertarJugador.php">Insertar Jugador</a>
+      <a class="btn btn-primary " href="insertarJugador.php?codigoEquipoParam=<?php echo $codigoEquipo ?>">Insertar Jugador</a>
 
 
 
