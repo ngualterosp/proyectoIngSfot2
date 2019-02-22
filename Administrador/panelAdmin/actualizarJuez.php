@@ -5,7 +5,9 @@
 	$crud= new CrudJuez();
 	$juez=new Juez();
 	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
-	$juez=$crud->obtenerJuez($_GET['cod_juez']);
+
+  $codigoJuez = $_GET['cod_juez'];
+	$juez=$crud->obtenerJuez($codigoJuez);
 
 	session_start();
 ?>
@@ -104,33 +106,19 @@
 
 <form action='acciones_juez.php' method='post'>
   <br><br>
+
+   <tr>
+      <td><input type="hidden" name="cod_juez" value='<?php echo $juez->getCodigoJuez()?>'></td>
+    </tr>
 <p>
 <label>Nombre Arbitro:</label>
 <input value="<?php echo $juez->getNombreJuez()?>" name="nom_juez" class="w3-input" type="text"></p>
 
-<center><button id="insertarJuez" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="insertarJuez">Insertar</button></center>
+<center><button id="actualizarJuez" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="actualizarJuez">Actualizar</button></center>
 
 </form>
 
-						<div id="segundaCapa">
-
-              <?php
-            			        $db = Db::conectar();
-                                if(isset($_POST['nom_categoria']))
-                                {
-                                      $nombreVar=$_POST['nom_categoria'];
-                                      $categoria = new Categoria();
-                                      $categoria->setNombre($nombreVar);
-                                      $categoria->setRuta(addslashes(file_get_contents($_FILES['ruta_imagen']['tmp_name'])));
-
-                                      $crud->insertarCategoria($categoria);
-
-
-                                }
-
-                                ?>
-
-						</div>
+						
 
           <footer class="sticky-footer">
             <div class="container my-auto">

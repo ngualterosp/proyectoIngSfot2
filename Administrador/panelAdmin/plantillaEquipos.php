@@ -112,7 +112,7 @@ $listaEquipos=$crud->mostrar();
            <?php foreach ($listaEquipos as $equipo) {?>
            <tr>
              <td><?php echo $equipo->getNombreEquipo() ?></td>
-             <td><a class="btn btn-primary" href="acciones_equipo.php?codigoEquipoParam=<?php echo $equipo->getCodigoEquipo()?>&accion=a">Modificar</a></td>
+             <td><a class="btn btn-primary" href="actualizarEquipo.php?cod_equipo=<?php echo $equipo->getCodigoEquipo()?>">Modificar</a></td>
              <td><a class="btn btn-primary" href="acciones_equipo.php?codigoEquipoParam=<?php echo $equipo->getCodigoEquipo()?>&accion=e">Eliminar</a></td>
              <td><a class="btn btn-primary" href="plantillaJugador.php?cod_equipo=<?php echo $equipo->getCodigoEquipo()?>"/>Ver Jugadores</td>
            </tr>

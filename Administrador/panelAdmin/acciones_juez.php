@@ -19,16 +19,14 @@
   	$elJuez->setNombreJuez($_POST['nom_juez']);
   	$crud->modificarJuez($elJuez);
 
+    header('Location: plantillaJuez.php');
+
 
   }
 
  elseif(isset($_POST['insertarJuez']))
   {
     $elJuez = new Juez();
-
-    $elJuez->setNombreJuez($_POST['nom_juez']);
-    $elJuez->setFoto(addslashes(file_get_contents($_FILES['foto']['tmp_name'])));
-    $crud->insertar($elJuez);
 
     $elJuez->setCodigoJuez($_POST['cod_juez']);
     $elJuez->setNombreJuez($_POST['nom_juez']);

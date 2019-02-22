@@ -50,7 +50,7 @@ require_once('juez.php');
 		$eliminarJugador->execute();
 	}
 
-	public function modificarJugador($juez)
+	public function modificarJuez($juez)
 	{
 		$db=Db::conectar();
 		$modificar = $db ->prepare('UPDATE juez SET nom_juez=:nom_juez WHERE cod_juez =:cod_juez');

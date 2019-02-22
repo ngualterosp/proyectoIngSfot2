@@ -1,15 +1,3 @@
-<?php
-//incluye la clase noticia y Crudnoticia
-require_once('crud_juez.php');
-require_once('juez.php');
-$crud=new CrudJuez();
-$juez= new Juez();
-//obtiene todos las noticias con el método mostrar de la clase crud
-$listaJueces=$crud->mostrar();
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +12,13 @@ $listaJueces=$crud->mostrar();
   <title>Administrator</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../../css/sb-admin.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -63,7 +51,7 @@ $listaJueces=$crud->mostrar();
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="../../plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
+          <a class="dropdown-item" href="plantilla.php" data-target="#logoutModal">Cerrar Sesion</a>
         </div>
       </li>
     </ul>
@@ -87,6 +75,12 @@ $listaJueces=$crud->mostrar();
         </a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link" href="plantillaEstadios.php">
+          <i class="fa fa-map-pin"></i>
+          <span>Estadios</span>
+        </a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="plantillaJuez.php">
           <i class="fa fa-eye"></i>
           <span>Arbitros</span>
@@ -104,30 +98,40 @@ $listaJueces=$crud->mostrar();
 
 
       <form action="" method="get">
-      <a class="btn btn-primary " href="insertarJuez.php">Insertar Juez</a>
+      <input name="insert" class="btn btn-primary " type="submit" value = "Insertar Equipo" />
 
 
 
 
        <br></br>
+        <table class="table table-striped">
 
-       <table class="table table-striped">
-         <head>
-           <td>Nombre Juez</td>
-           <td>Actualizar</td>
-           <td>Eliminar</td>
-         </head>
-         <body>
-           <?php foreach ($listaJueces as $juez) {?>
-           <tr>
-             <td><?php echo $juez->getNombreJuez() ?></td>
-             <td><a class="btn btn-primary" href="actualizarJuez.php?cod_juez=<?php echo $juez->getCodigoJuez()?>">Modificar</a></td>
-             <td><a class="btn btn-primary" href="acciones_juez.php?codigoJuezParam=<?php echo $juez->getCodigoJuez()?>&accion=e">Eliminar</a></td>
+        		<thead>
+        		<tr>
+        			<th>Nombre Equipo</th>
+              <th>Modificar</th>
+              <th>Eliminar</th>
+              <th>Jugadores</th>
+        		</tr>
+        		</thead>
 
-           </tr>
-           <?php } ?>
-         </body>
-       </table>
+
+         <?php foreach ($listaGira as $gira){ // aca puedes hacer la consulta e iterarla con each. ?>
+        <tr>
+          <td><?php echo $gira->getNombre() // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
+            <td><?php echo $gira->getDescripcion() ?></td>
+            <td><?php echo $gira->getFecha() ?></td>
+            <td><a  class="btn btn-primary" href="../Modelos/gira/actualizar.php?cod_gira=<?php echo $gira->getCodigoGira() ?>&accion=a">Modificar</a></td>
+            <td><a  class="btn btn-primary " href="../Modelos/gira/administrar_gira.php?cod_gira=<?php echo $gira->getCodigoGira()?>&accion=e" />Eliminar</td>
+            <td><a  class="btn btn-primary " href="../Modelos/gira/eventosXgira.php?cod_gira=<?php echo $gira->getCodigoGira()?>" />Eventos Asociados</td>
+        </tr>
+        <?php
+          }
+        ?>
+
+
+
+      </table>
 
     </form>
 
@@ -171,23 +175,23 @@ $listaJueces=$crud->mostrar();
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="../../vendor/chart.js/Chart.min.js"></script>
-  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../../js/sb-admin.min.js"></script>
+  <script src="js/sb-admin.min.js"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="../../js/demo/datatables-demo.js"></script>
-  <script src="../../js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
 
 </body>
 

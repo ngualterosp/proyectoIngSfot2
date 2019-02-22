@@ -1,9 +1,13 @@
 <?php
 session_start();
 require_once "conexion.php";
-require_once "crud_jugador.php";
+require_once "crud_equipo.php";
 
-$crud = new CrudJugador();
+$crud = new CrudEquipo();
+
+$codigoEquipo = $_GET['cod_equipo'];
+
+$equipo = $crud->obtenerEquipo($codigoEquipo);
 
 
 ?>
@@ -102,11 +106,15 @@ $crud = new CrudJugador();
 
 <form id="form_35166" method="post" action="acciones_equipo.php" enctype="multipart/form-data" class="w3-container">
   <br><br>
+
+  <tr>
+      <td><input type="hidden" name="cod_equipo" value='<?php echo $equipo->getCodigoEquipo()?>'></td>
+    </tr>
 <p>
 <label>Nombre Equipo:</label>
-<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text"></p>
+<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text" value = "<?php echo $equipo->getNombreEquipo()?>"></p>
 
-<center><button id="insertarEquipo" type="submit" name="insertarEquipo" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
+<center><button id="actualizarEquipo" type="submit" name="actualizarEquipo" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Actualizar</button></center>
 
 </form>
 

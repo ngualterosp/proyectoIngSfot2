@@ -19,6 +19,8 @@
 
   	$crud->modificarJugador($elEquipo);
 
+    header('Location: plantillaEquipos.php');
+
 
   }
 

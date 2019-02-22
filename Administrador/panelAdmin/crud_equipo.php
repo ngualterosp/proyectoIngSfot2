@@ -67,7 +67,7 @@ require_once('equipo.php');
 			$select->execute();
 			$equipo=$select->fetch();
 			$myEquipo= new Equipo();
-			$myEquipo->setCodigoEquipo($equipo['$cod_equipo']);
+			$myEquipo->setCodigoEquipo($equipo['cod_equipo']);
 			$myEquipo->setNombreEquipo($equipo['nom_equipo']);
 			return $myEquipo;
 		}
