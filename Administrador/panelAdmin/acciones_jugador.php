@@ -18,6 +18,7 @@
   	$elJugador->setNombre($_POST['nom_jugador']);
   	$elJugador->setDorsal($_POST['dorsal']);
   	$elJugador->setEdad($_POST['edad']);
+    $elJugador->setPosicion($_POST['pos_jugador']);
 
 
   	$crud->modificarJugador($elJugador);

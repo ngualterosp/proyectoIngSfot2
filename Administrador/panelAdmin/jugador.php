@@ -9,6 +9,8 @@
    private $dorsal;
    private $edad;
    private $foto_jugador;
+   private $ruta_imagen;
+
 
    function __construct(){}
 
