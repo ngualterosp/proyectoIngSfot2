@@ -39,7 +39,7 @@
 
 <!-- Team Container -->
 <?php
-require_once('Administrador/panelAdmin/jugadorCliente.php');
+include('Administrador/panelAdmin/jugadorCliente.php');
 
 
  ?>
@@ -47,7 +47,7 @@ require_once('Administrador/panelAdmin/jugadorCliente.php');
 
 <!-- Work Row -->
 <?php
-        require_once('Administrador/panelAdmin/estadiosCliente.php');
+        include('Administrador/panelAdmin/estadiosCliente.php');
 
 ?>
 <!-- Pricing Row -->

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 
-    require_once "crud_jugador.php";
-    require_once "jugador.php";
+    require_once ('crud_jugador.php');
+    require_once ('jugador.php');
     require_once('conexion.php');
 
 
@@ -33,7 +33,7 @@
     <div class="w3-row"><br>
 
     <div class="w3-quarter">
-      <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFoto())); ?>" style="width:60%;min-height:200px">
+      <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
       <h3><?php echo $jugador->getNombre()?></h3>
       <p><?php echo $jugador->getPosicion()?></p>
       <p><?php echo $jugador->getDorsal()?></p>
@@ -58,7 +58,7 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFoto())); ?>" style="width:60%;min-height:200px">
+  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
   <h3><?php echo $jugador->getNombre()?></h3>
   <p><?php echo $jugador->getPosicion()?></p>
   <p><?php echo $jugador->getDorsal()?></p>
@@ -83,7 +83,7 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFoto())); ?>" style="width:60%;min-height:200px">
+  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
   <h3><?php echo $jugador->getNombre()?></h3>
   <p><?php echo $jugador->getPosicion()?></p>
   <p><?php echo $jugador->getDorsal()?></p>
