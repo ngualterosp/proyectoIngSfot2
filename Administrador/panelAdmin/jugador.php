@@ -8,11 +8,7 @@
    private $pos_jugador;
    private $dorsal;
    private $edad;
-<<<<<<< HEAD
    private $foto_jugador;
-=======
-   private $foto;
->>>>>>> master
 
    function __construct(){}
 
@@ -66,16 +62,11 @@
 
     public function getFoto()
   	{
-<<<<<<< HEAD
   		return $this->foto_jugador;
-=======
-  		return $this->foto;
->>>>>>> master
   	}
 
   	public function setFoto($nuevafoto)
   	{
-<<<<<<< HEAD
   		$this->foto_jugador = $nuevafoto;
   	}
 
@@ -90,10 +81,6 @@
   	}
 
 
-=======
-  		$this->foto = $nuevafoto;
-  	}
->>>>>>> master
 
 
 

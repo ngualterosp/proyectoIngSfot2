@@ -32,23 +32,15 @@ require_once('jugador.php');
    	public function insertar($jugador)
    	{
    		$db=Db::conectar();
-<<<<<<< HEAD
    		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, pos_jugador, dorsal, edad, foto_jugador) values(:cod_equipo,:nom_jugador,:pos_jugador, :dorsal,:edad,:foto_jugador)');
-=======
-   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, dorsal, edad, foto) values(:cod_equipo,:nom_jugador,:num_dorsal,:edad,:foto)');
->>>>>>> master
 
 			$insert->bindValue('cod_equipo',$jugador->getCodigoEquipo());
 			$insert->bindValue('nom_jugador',$jugador->getNombre());
       $insert->bindValue('pos_jugador',$jugador->getPosicion());
 			$insert->bindValue('dorsal',$jugador->getDorsal());
 			$insert->bindValue('edad',$jugador->getEdad());
-<<<<<<< HEAD
       $insert->bindValue('foto_jugador',$jugador->getFoto());
 
-=======
-      $insert->bindValue('foto',$jugador->getFoto());
->>>>>>> master
 			$insert->execute();
 
 
@@ -76,13 +68,9 @@ require_once('jugador.php');
 				$myJugador->setNombre($jugador['nom_jugador']);
         $myJugador->setPosicion($jugador['pos_jugador']);
 				$myJugador->setDorsal($jugador['dorsal']);
-<<<<<<< HEAD
 			    $myJugador->setEdad($jugador['edad']);
           $myJugador->setFoto($jugador['foto_jugador']);
 
-=======
-			  $myJugador->setEdad($jugador['edad']);
->>>>>>> master
 
 				$listaJugadores[]=$myJugador;
 			}
