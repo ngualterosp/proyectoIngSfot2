@@ -88,14 +88,13 @@ require_once('jugador.php');
 	public function modificarJugador($jugador)
 	{
 		$db=Db::conectar();
-		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, pos_jugador=:pos_jugador, dorsal =:dorsal, edad=:edad, foto_jugador=:foto_jugador WHERE cod_jugador =:cod_jugador');
+		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, pos_jugador=:pos_jugador, dorsal =:dorsal, edad=:edad WHERE cod_jugador =:cod_jugador');
 		$modificar->bindValue('cod_jugador', $jugador->getCodigoJugador());
 		$modificar->bindValue('cod_equipo', $jugador->getCodigoEquipo());
 		$modificar->bindValue('nom_jugador', $jugador->getNombre());
     $modificar->bindValue('pos_jugador', $jugador->getPosicion());
 		$modificar->bindValue('dorsal', $jugador->getDorsal());
 		$modificar->bindValue('edad', $jugador->getEdad());
-    $modificar->bindValue('foto_jugador', $jugador->getFotoJugador());
 
 
 		$modificar->execute();
