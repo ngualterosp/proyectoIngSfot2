@@ -115,7 +115,7 @@ $equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
   <br><br>
   <p>
   <label> Equipo: <?php echo $equipo->getNombreEquipo() ?></label>
-  <input id="equipoParam" placeholder="<?php $equipo->getCodigoEquipo() ?>" name="equipoParam" class="w3-input" type="hidden"></p>
+  <input id="equipoParam" placeholder="<?php echo $equipo->getCodigoEquipo()?>" name="equipoParam" class="w3-input" type="hidden" value = "<?php echo $equipo->getCodigoEquipo()?>"></p>
   <p>
 <p>
 <label>Nombre Jugador:</label>
