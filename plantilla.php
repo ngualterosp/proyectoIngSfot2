@@ -135,54 +135,10 @@
 </div>
 
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<?php
+        require_once('Administrador/panelAdmin/estadiosCliente.php');
 
-<div class="w3-quarter">
-<h2>Estadios de la liga</h2>
-<p>
-A continuación estan las imágenes e información de los estadios en donde se jugarán los partidos de nuestra liga. Todos con las mejores condiciones para recibir los
-encuentros dentro de este campeonato. Contamos con la verificación de la FIFA.
-</p>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/estadio1.jpg" alt="Snow" style="width:100%">
-  <div class="w3-container">
-  <h3>Stamford Bridge</h3>
-  <h4>Londres, Inglaterra</h4>
-  <p>1883</p>
-  <p>41.841</p>
-  </div>
-  </div>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/estadio2.jpg" alt="Lights" style="width:100%">
-  <div class="w3-container">
-    <h3>Illesium Stadium</h3>
-    <h4>Qatar</h4>
-    <p>2018</p>
-    <p>87.123</p>
-  </div>
-  </div>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/estadio3.jpg" alt="Mountains" style="width:100%">
-  <div class="w3-container">
-    <h3>Allianz Arena</h3>
-    <h4>Munich, Alemania</h4>
-    <p>1925</p>
-    <p>49.230</p>
-  </div>
-  </div>
-</div>
-
-</div>
-
+?>
 <!-- Pricing Row -->
 
 
