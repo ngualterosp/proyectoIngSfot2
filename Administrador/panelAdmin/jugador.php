@@ -7,6 +7,7 @@
    private $nom_jugador;
    private $num_dorsal;
    private $edad;
+   private $foto;
 
    function __construct(){}
 
@@ -58,7 +59,15 @@
   		$this->edad = $nuevaedad;
   	}
 
-  	
+    public function getFoto()
+  	{
+  		return $this->foto;
+  	}
+
+  	public function setFoto($nuevafoto)
+  	{
+  		$this->foto = $nuevafoto;
+  	}
 
 
 
