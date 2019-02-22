@@ -112,6 +112,9 @@ $crud = new CrudJugador();
 <label>Nombre Jugador:</label>
 <input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
 <p>
+<label>Posición:</label>
+<input id="posParam" placeholder="Posición Jugador" name="posParam" class="w3-input" type="text"></p>
+<p>
 <label>Dorsal:</label>
 <input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
 <p>

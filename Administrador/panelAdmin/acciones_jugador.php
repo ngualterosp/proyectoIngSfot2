@@ -32,6 +32,7 @@
   	 $elJugador = new Jugador();
      $elJugador->setCodigoEquipo($_POST['equipoParam']);
      $elJugador->setNombre($_POST['nombreJugadorParam']);
+     $elJugador->setPosicion($_POST['posParam']);
      $elJugador->setDorsal($_POST['dorsalParam']);
      $elJugador->setEdad($_POST['edadParam']);
      $elJugador->setFotoJugador(addslashes(file_get_contents($_FILES['fotoParam']['tmp_name'])));
