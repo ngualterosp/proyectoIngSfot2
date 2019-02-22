@@ -30,7 +30,7 @@
 
       # code...
     ?>
-    <div class="w3-row"><br>
+
 
     <div class="w3-quarter">
       <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
@@ -38,9 +38,6 @@
       <p><?php echo $jugador->getPosicion()?></p>
       <p><?php echo $jugador->getDorsal()?></p>
       <p><?php echo $jugador->getEdad()?></p>
-
-    </div>
-
 
     </div>
 
@@ -55,7 +52,6 @@
 
   # code...
 ?>
-<div class="w3-row"><br>
 
 <div class="w3-quarter">
   <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
@@ -66,8 +62,6 @@
 
 </div>
 
-
-</div>
 
 <?php } ?>
 
@@ -80,7 +74,6 @@
 
   # code...
 ?>
-<div class="w3-row"><br>
 
 <div class="w3-quarter">
   <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" style="width:60%;min-height:200px">
@@ -88,9 +81,6 @@
   <p><?php echo $jugador->getPosicion()?></p>
   <p><?php echo $jugador->getDorsal()?></p>
   <p><?php echo $jugador->getEdad()?></p>
-
-</div>
-
 
 </div>
 
