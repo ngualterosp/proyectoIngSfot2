@@ -16,7 +16,7 @@ require_once('juez.php');
 			$insert->bindValue('nom_juez',$juez->getNombreJuez());
 			$insert->execute();
 
-			
+
    	}
 
 
@@ -37,7 +37,7 @@ require_once('juez.php');
 				$myJuez= new Juez();
 				$myJuez->setCodigoJuez($juez['cod_juez']);
 				$myJuez->setNombreJuez($juez['nom_juez']);
-			    
+
 				$listaJueces[]=$myJuez;
 			}
 			return $listaJueces;
@@ -62,7 +62,17 @@ require_once('juez.php');
 	}
 
 
-
+  public function obtenerJuez($codigoJuez){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM juez WHERE cod_juez=:cod_juez');
+			$select->bindValue('cod_juez',$codigoJuez);
+			$select->execute();
+			$juez=$select->fetch();
+			$myJuez= new Juez();
+			$myJuez->setCodigoJuez($juez['cod_juez']);
+			$myJuez->setNombreJuez($juez['nom_juez']);
+			return $myJuez;
+		}
 
 
 

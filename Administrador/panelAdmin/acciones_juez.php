@@ -9,6 +9,8 @@
 
 
 
+
+
   if(isset($_POST['actualizarJuez']))
   {
 
@@ -24,16 +26,15 @@
  elseif(isset($_POST['insertarJuez']))
   {
     $elJuez = new Juez();
-<<<<<<< HEAD
+
     $elJuez->setNombreJuez($_POST['nom_juez']);
     $crud->insertar($elJuez);
-=======
+
     $elJuez->setCodigoJuez($_POST['cod_juez']);
-    $elJuez->setNombreJuez($_POST['nom_juez']);   
+    $elJuez->setNombreJuez($_POST['nom_juez']);
 
 
      $crud->insertar($elJuez);
->>>>>>> master
 
      header('Location: plantillaJuez.php');
 
@@ -50,5 +51,5 @@
   {
     header('Location: actualizarJuez.php');
   }
-
+  
 ?>

@@ -1,11 +1,10 @@
 <?php
-//incluye la clase noticia y CrudNoticia
-	require_once('crud_jugador.php');
-	require_once('jugador.php');
-	$crud= new CrudJugador();
-	$jugador=new Jugador();
-	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
-	$jugador=$crud->obtenerJugador($_GET['cod_jugador']);
+session_start();
+require_once "conexion.php";
+require_once "crud_jugador.php";
+
+$crud = new CrudJugador();
+
 
 ?>
 
@@ -97,89 +96,37 @@
 
     <div id="content-wrapper">
 
-						<div class="w3-container w3-black">
-			        <center><h2>Modificar Jugador</h2></center>
-			      </div>
+      <div class="w3-container w3-black">
+        <center><h2>Insertar Equipo</h2></center>
+      </div>
 
-						<form action='acciones_jugador.php' method='post'>
-						  <br><br>
-						<p>
-						<input type="hidden" name="cod_jugador" value='<?php echo $jugador->getCodigoJugador() ?>'>
-						<input type="hidden" name="cod_equipo" value='<?php echo $jugador->getCodigoEquipo() ?>'>
-						</p>
-						<p>
-						<label>Nombre Jugador:</label>
-						<input value='<?php echo $jugador->getNombre()?>' name="nom_jugador" class="w3-input" type="text"></p>
-						<p>
-						<label>Dorsal:</label>
-						<input value='<?php echo $jugador->getDorsal()?>' name="num_dorsal" class="w3-input" type="text"></p>
-						<p>
-						<label>Edad:</label>
-						<input value='<?php echo $jugador->getEdad()?>' name="edad" class="w3-input" type="text"></p>
+<form id="form_35166" method="post" action="acciones_equipo.php" enctype="multipart/form-data" class="w3-container">
+  <br><br>
+<p>
+<label>Nombre Equipo:</label>
+<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text"></p>
 
-						<center><button type="submit" value="Modificar" name="actualizarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Modificar</button></center>
+<center><button id="insertarEquipo" type="submit" name="insertarEquipo" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
 
-						</form>
+</form>
 
-					</div>
+						<div id="segundaCapa">
 
+						</div>
 
-
-
-        <!-- /.container-fluid -->
-
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+          <footer class="sticky-footer">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>Copyright © Your Website 2019</span>
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
 
       </div>
       <!-- /.content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
-		<script type="text/javascript">
-		<!--
-		function filterFloat(evt,input){
-				// Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
-				var key = window.Event ? evt.which : evt.keyCode;
-				var chark = String.fromCharCode(key);
-				var tempValue = input.value+chark;
-				if(key >= 48 && key <= 57){
-						if(filter(tempValue)=== false){
-								return false;
-						}else{
-								return true;
-						}
-				}else{
-							if(key == 8 || key == 13 || key == 0) {
-									return true;
-							}else if(key == 46){
-										if(filter(tempValue)=== false){
-												return false;
-										}else{
-												return true;
-										}
-							}else{
-									return false;
-							}
-				}
-		}
-		function filter(__val__){
-				var preg = /^([0-9]+\.?[0-9]{0,2})$/;
-				if(preg.test(__val__) === true){
-						return true;
-				}else{
-					 return false;
-				}
-
-		}
-		-->
-		</script>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -205,19 +152,17 @@
       </div>
     </div>
 
-
-
     <!-- Bootstrap core JavaScript-->
-    <script src="../../vendor1/jquery/jquery.min.js"></script>
-    <script src="../../vendor1/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../../vendor1/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="../../vendor1/chart.js/Chart.min.js"></script>
-    <script src="../../vendor1/datatables/jquery.dataTables.js"></script>
-    <script src="../../vendor1/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../../vendor/chart.js/Chart.min.js"></script>
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin.min.js"></script>
@@ -228,4 +173,4 @@
 
   </body>
 
-</html>
+  </html>

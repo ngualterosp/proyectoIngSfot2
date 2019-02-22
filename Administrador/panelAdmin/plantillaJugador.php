@@ -127,7 +127,7 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
              <td><?php echo $jugador->getNombre() ?></td>
              <td><?php echo $jugador->getDorsal() ?></td>
              <td><?php echo $jugador->getEdad()?> </td>
-             <td><a class="btn btn-primary" href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=a">Modificar</a></td>
+             <td><a class="btn btn-primary" href="actualizarJugador.php?cod_jugador=<?php echo $jugador->getCodigoJugador()?>">Modificar</a></td>
              <td><a class="btn btn-primary" href="acciones_jugador.php?codigoJugadorParam=<?php echo $jugador->getCodigoJugador()?>&accion=e">Eliminar</a></td>
            </tr>
            <?php } ?>
