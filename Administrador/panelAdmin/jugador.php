@@ -5,8 +5,10 @@
    private $cod_jugador;
    private $cod_equipo;
    private $nom_jugador;
-   private $num_dorsal;
+   private $pos_jugador;
+   private $dorsal;
    private $edad;
+   private $foto_jugador;
 
    function __construct(){}
 
@@ -40,12 +42,12 @@
   	}
   	public function getDorsal()
   	{
-  		return $this->num_dorsal;
+  		return $this->dorsal;
   	}
 
   	public function setDorsal($nuevaDorsal)
   	{
-  		$this->num_dorsal = $nuevaDorsal;
+  		$this->dorsal = $nuevaDorsal;
   	}
 
   	public function getEdad()
@@ -58,7 +60,27 @@
   		$this->edad = $nuevaedad;
   	}
 
-  	
+    public function getFoto()
+  	{
+  		return $this->foto_jugador;
+  	}
+
+  	public function setFoto($nuevafoto)
+  	{
+  		$this->foto_jugador = $nuevafoto;
+  	}
+
+    public function getPosicion()
+  	{
+  		return $this->pos_jugador;
+  	}
+
+  	public function setPosicion($nuevapos)
+  	{
+  		$this->pos_jugador = $nuevapos;
+  	}
+
+
 
 
 

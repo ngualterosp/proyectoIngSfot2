@@ -38,101 +38,12 @@
 </div>
 
 <!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>MÁXIMOS GOLEADORES</h2>
+<?php
+require_once('Administrador/panelAdmin/jugadorCliente.php');
 
-<div class="w3-row"><br>
 
-<div class="w3-quarter">
-  <img src="img/usu1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cristiano Ronaldo</h3>
-  <p>Delantero</p>
-</div>
+ ?>
 
-<div class="w3-quarter">
-  <img src="img/usu2.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Lionel Messi</h3>
-  <p>Delantero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu3.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Kilian Mbappe</h3>
-  <p>Delantero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu4.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Toloza</h3>
-  <p>Delantero</p>
-</div>
-
-</div>
-</div>
-
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>MÁXIMOS ASISTENTES</h2>
-
-<div class="w3-row"><br>
-
-<div class="w3-quarter">
-  <img src="img/usu5.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Juanfe Quintero</h3>
-  <p>Volante</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu2.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Lionel Messi</h3>
-  <p>Delantero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu6.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Ngolo Kante</h3>
-  <p>Volante</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu7.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Luka Modric</h3>
-  <p>Volante</p>
-</div>
-
-</div>
-</div>
-
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>MALLAS MENOS VENCIDA</h2>
-
-<div class="w3-row"><br>
-
-<div class="w3-quarter">
-  <img src="img/usu8.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Cortois</h3>
-  <p>Portero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu9.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>David De gea</h3>
-  <p>Portero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu10.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Manuel Neuer</h3>
-  <p>Portero</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="img/usu11.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Rufay Zapata</h3>
-  <p>Portero</p>
-</div>
-
-</div>
-</div>
 
 <!-- Work Row -->
 <?php
