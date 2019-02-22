@@ -20,8 +20,10 @@ require_once('jugador.php');
     	 $elJugador->setCodigoJugador($jugador['cod_jugador']);
     	 $elJugador->setCodigoEquipo($jugador['cod_equipo']);
     	 $elJugador->setNombre($jugador['nom_jugador']);
+       $elJugador->setPosicion($jugador['pos_jugador']);
     	 $elJugador->setDorsal($jugador['dorsal']);
     	 $elJugador->setEdad($jugador['edad']);
+       $elJugador->setFoto($jugador['foto_jugador']);
 
     	 return $elJugador;
 
@@ -30,13 +32,15 @@ require_once('jugador.php');
    	public function insertar($jugador)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, dorsal, edad, foto) values(:cod_equipo,:nom_jugador,:num_dorsal,:edad,:foto)');
+   		$insert=$db->prepare('INSERT INTO jugador(cod_equipo, nom_jugador, pos_jugador, dorsal, edad, foto_jugador) values(:cod_equipo,:nom_jugador,:pos_jugador, :dorsal,:edad,:foto_jugador)');
 
 			$insert->bindValue('cod_equipo',$jugador->getCodigoEquipo());
 			$insert->bindValue('nom_jugador',$jugador->getNombre());
-			$insert->bindValue('num_dorsal',$jugador->getDorsal());
+      $insert->bindValue('pos_jugador',$jugador->getPosicion());
+			$insert->bindValue('dorsal',$jugador->getDorsal());
 			$insert->bindValue('edad',$jugador->getEdad());
-      $insert->bindValue('foto',$jugador->getFoto());
+      $insert->bindValue('foto_jugador',$jugador->getFoto());
+
 			$insert->execute();
 
 
@@ -60,11 +64,13 @@ require_once('jugador.php');
 
 				$myJugador= new Jugador();
 				$myJugador->setCodigoJugador($jugador['cod_jugador']);
-
 				$myJugador->setCodigoEquipo($jugador['cod_equipo']);
 				$myJugador->setNombre($jugador['nom_jugador']);
+        $myJugador->setPosicion($jugador['pos_jugador']);
 				$myJugador->setDorsal($jugador['dorsal']);
-			  $myJugador->setEdad($jugador['edad']);
+			    $myJugador->setEdad($jugador['edad']);
+          $myJugador->setFoto($jugador['foto_jugador']);
+
 
 				$listaJugadores[]=$myJugador;
 			}
@@ -82,15 +88,46 @@ require_once('jugador.php');
 	public function modificarJugador($jugador)
 	{
 		$db=Db::conectar();
-		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, dorsal =:num_dorsal, edad=:edad WHERE cod_jugador =:cod_jugador');
+		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, pos_jugador=:pos_jugador, dorsal =:dorsal, edad=:edad, foto_jugador=:foto_jugador WHERE cod_jugador =:cod_jugador');
 		$modificar->bindValue('cod_jugador', $jugador->getCodigoJugador());
 		$modificar->bindValue('cod_equipo', $jugador->getCodigoEquipo());
 		$modificar->bindValue('nom_jugador', $jugador->getNombre());
-		$modificar->bindValue('num_dorsal', $jugador->getDorsal());
+    $modificar->bindValue('pos_jugador', $jugador->getPosicion());
+		$modificar->bindValue('dorsal', $jugador->getDorsal());
 		$modificar->bindValue('edad', $jugador->getEdad());
+    $modificar->bindValue('foto_jugador', $jugador->getFoto());
+
 
 		$modificar->execute();
 	}
+
+  public function obtenerGoleador()
+  {
+
+    $listaJugadores=[];
+        $db=Db::conectar();
+      $select=$db->prepare('SELECT  DISTINCT * FROM jugador ORDER BY cod_jugador DESC LIMIT 4');
+
+      $select->execute();
+       foreach ($select->fetchAll() as $jugador)
+       {
+
+         $myJugador= new Jugador();
+
+         $myJugador->setCodigoJugador($jugador['cod_jugador']);
+         $myJugador->setCodigoEquipo($jugador['cod_equipo']);
+         $myJugador->setNombre($jugador['nom_jugador']);
+         $myJugador->setPosicion($jugador['pos_jugador']);
+         $myJugador->setDorsal($jugador['dorsal']);
+           $myJugador->setEdad($jugador['edad']);
+           $myJugador->setFoto($jugador['foto_jugador']);
+
+
+        $listaJugadores[] = $myJugador;
+
+       }
+       return $listaJugadores;
+  }
 
 
 

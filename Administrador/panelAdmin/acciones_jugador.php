@@ -16,7 +16,7 @@
   	$elJugador->setCodigoJugador($_POST['cod_jugador']);
   	$elJugador->setCodigoEquipo($_POST['cod_equipo']);
   	$elJugador->setNombre($_POST['nom_jugador']);
-  	$elJugador->setDorsal($_POST['num_dorsal']);
+  	$elJugador->setDorsal($_POST['dorsal']);
   	$elJugador->setEdad($_POST['edad']);
 
 
