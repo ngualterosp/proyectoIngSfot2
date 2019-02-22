@@ -23,7 +23,7 @@ require_once('jugador.php');
        $elJugador->setPosicion($jugador['pos_jugador']);
     	 $elJugador->setDorsal($jugador['dorsal']);
     	 $elJugador->setEdad($jugador['edad']);
-       $elJugador->setFoto($jugador['foto_jugador']);
+       $elJugador->setFotoJugador($jugador['foto_jugador']);
 
     	 return $elJugador;
 
@@ -39,7 +39,7 @@ require_once('jugador.php');
       $insert->bindValue('pos_jugador',$jugador->getPosicion());
 			$insert->bindValue('dorsal',$jugador->getDorsal());
 			$insert->bindValue('edad',$jugador->getEdad());
-      $insert->bindValue('foto_jugador',$jugador->getFoto());
+      $insert->bindValue('foto_jugador',$jugador->getFotoJugador());
 
 			$insert->execute();
 
@@ -69,7 +69,7 @@ require_once('jugador.php');
         $myJugador->setPosicion($jugador['pos_jugador']);
 				$myJugador->setDorsal($jugador['dorsal']);
 			    $myJugador->setEdad($jugador['edad']);
-          $myJugador->setFoto($jugador['foto_jugador']);
+          $myJugador->setFotoJugador($jugador['foto_jugador']);
 
 
 				$listaJugadores[]=$myJugador;
@@ -95,7 +95,7 @@ require_once('jugador.php');
     $modificar->bindValue('pos_jugador', $jugador->getPosicion());
 		$modificar->bindValue('dorsal', $jugador->getDorsal());
 		$modificar->bindValue('edad', $jugador->getEdad());
-    $modificar->bindValue('foto_jugador', $jugador->getFoto());
+    $modificar->bindValue('foto_jugador', $jugador->getFotoJugador());
 
 
 		$modificar->execute();
@@ -120,7 +120,7 @@ require_once('jugador.php');
          $myJugador->setPosicion($jugador['pos_jugador']);
          $myJugador->setDorsal($jugador['dorsal']);
            $myJugador->setEdad($jugador['edad']);
-           $myJugador->setFoto($jugador['foto_jugador']);
+           $myJugador->setFotoJugador($jugador['foto_jugador']);
 
 
         $listaJugadores[] = $myJugador;

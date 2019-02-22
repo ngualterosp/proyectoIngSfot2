@@ -30,7 +30,7 @@
 
     $elJuez->setCodigoJuez($_POST['cod_juez']);
     $elJuez->setNombreJuez($_POST['nom_juez']);
-
+    $elJuez->setFoto(addslashes(file_get_contents($_FILES['foto']['tmp_name'])));
 
      $crud->insertar($elJuez);
 

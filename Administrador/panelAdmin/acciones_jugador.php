@@ -34,7 +34,7 @@
      $elJugador->setNombre($_POST['nombreJugadorParam']);
      $elJugador->setDorsal($_POST['dorsalParam']);
      $elJugador->setEdad($_POST['edadParam']);
-     $elJugador->setFoto(addslashes(file_get_contents($_FILES['fotoParam']['tmp_name'])));
+     $elJugador->setFotoJugador(addslashes(file_get_contents($_FILES['fotoParam']['tmp_name'])));
 
 
      $crud->insertar($elJugador);

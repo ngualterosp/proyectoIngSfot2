@@ -60,12 +60,12 @@
   		$this->edad = $nuevaedad;
   	}
 
-    public function getFoto()
+    public function getFotoJugador()
   	{
   		return $this->foto_jugador;
   	}
 
-  	public function setFoto($nuevafoto)
+  	public function setFotoJugador($nuevafoto)
   	{
   		$this->foto_jugador = $nuevafoto;
   	}
