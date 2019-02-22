@@ -111,8 +111,11 @@
 						<label>Nombre Jugador:</label>
 						<input value='<?php echo $jugador->getNombre()?>' name="nom_jugador" class="w3-input" type="text"></p>
 						<p>
+						<label>Posición Jugador:</label>
+						<input value='<?php echo $jugador->getPosicion()?>' name="pos_jugador" class="w3-input" type="text"></p>
+						<p>
 						<label>Dorsal:</label>
-						<input value='<?php echo $jugador->getDorsal()?>' name="num_dorsal" class="w3-input" type="text"></p>
+						<input value='<?php echo $jugador->getDorsal()?>' name="dorsal" class="w3-input" type="text"></p>
 						<p>
 						<label>Edad:</label>
 						<input value='<?php echo $jugador->getEdad()?>' name="edad" class="w3-input" type="text"></p>

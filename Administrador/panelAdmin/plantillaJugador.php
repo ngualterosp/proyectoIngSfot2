@@ -116,6 +116,7 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
        <table class="table table-striped">
          <head>
            <td>Nombre Jugador</td>
+           <td>Posición Jugador</td>
            <td>Dorsal</td>
            <td>Edad</td>
            <td>Actualizar</td>
@@ -125,6 +126,7 @@ $listaJugadores=$crud->mostrar($codigoEquipo);
            <?php foreach ($listaJugadores as $jugador) {?>
            <tr>
              <td><?php echo $jugador->getNombre() ?></td>
+             <td><?php echo $jugador->getPosicion() ?></td>
              <td><?php echo $jugador->getDorsal() ?></td>
              <td><?php echo $jugador->getEdad()?> </td>
              <td><a class="btn btn-primary" href="actualizarJugador.php?cod_jugador=<?php echo $jugador->getCodigoJugador()?>">Modificar</a></td>
