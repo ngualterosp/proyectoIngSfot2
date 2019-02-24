@@ -7,7 +7,7 @@
 	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
 
   $codigoJuez = $_GET['cod_juez'];
-	$juez=$crud->obtenerJuez($codigoJuez);
+	$juez=$crud->obtener($codigoJuez);
 
 	session_start();
 ?>

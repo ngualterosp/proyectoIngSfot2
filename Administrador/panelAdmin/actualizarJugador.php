@@ -5,7 +5,7 @@
 	$crud= new CrudJugador();
 	$jugador=new Jugador();
 	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
-	$jugador=$crud->obtenerJugador($_GET['cod_jugador']);
+	$jugador=$crud->obtener($_GET['cod_jugador']);
 
 ?>
 

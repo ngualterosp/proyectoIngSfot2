@@ -1,9 +1,10 @@
 <?php
 
 require_once('conexion.php');
+require_once('crud_general.php');
 require_once('juez.php');
 
-  class CrudJuez{
+  class CrudJuez extends Crud_general{
 
    	public function __construct(){}
 
@@ -50,7 +51,7 @@ require_once('juez.php');
 		$eliminarJugador->execute();
 	}
 
-	public function modificarJuez($juez)
+	public function modificar($juez)
 	{
 		$db=Db::conectar();
 		$modificar = $db ->prepare('UPDATE juez SET nom_juez=:nom_juez WHERE cod_juez =:cod_juez');
@@ -61,7 +62,7 @@ require_once('juez.php');
 	}
 
 
-  public function obtenerJuez($codigoJuez){
+  public function obtener($codigoJuez){
 			$db=Db::conectar();
 			$select=$db->prepare('SELECT * FROM juez WHERE cod_juez=:cod_juez');
 			$select->bindValue('cod_juez',$codigoJuez);

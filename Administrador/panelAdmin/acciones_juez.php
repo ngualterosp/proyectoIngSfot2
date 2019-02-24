@@ -17,7 +17,7 @@
   	$elJuez = new Juez();
   	$elJuez->setCodigoJuez($_POST['cod_juez']);
   	$elJuez->setNombreJuez($_POST['nom_juez']);
-  	$crud->modificarJuez($elJuez);
+  	$crud->modificar($elJuez);
 
     header('Location: plantillaJuez.php');
 

@@ -2,14 +2,15 @@
 
 require_once('conexion.php');
 require_once('jugador.php');
-   class CrudJugador{
+require_once('crud_general.php');
+   class CrudJugador extends Crud_general{
 
    	public function __construct(){}
 
 
 
 
-    public function obtenerJugador($codJugador)
+    public function obtener($codJugador)
     {
     	 $db=Db::conectar();
     	 $select=$db->prepare('SELECT * FROM jugador WHERE cod_jugador=:cod_jugador');
@@ -46,10 +47,15 @@ require_once('jugador.php');
 
    	}
 
+    public function mostrar()
+    {
+      
+    }
 
 
 
-   	public function mostrar($codigoEquipo){
+
+   	public function mostrarJugadores($codigoEquipo){
 			$db=Db::conectar();
 			$listaJugadores=[];
 			$select=$db->prepare('SELECT * FROM jugador where cod_equipo=:cod_equipo');
@@ -85,7 +91,7 @@ require_once('jugador.php');
 		$eliminarJugador->execute();
 	}
 
-	public function modificarJugador($jugador)
+	public function modificar($jugador)
 	{
 		$db=Db::conectar();
 		$modificar = $db ->prepare('UPDATE jugador SET cod_equipo=:cod_equipo, nom_jugador=:nom_jugador, pos_jugador=:pos_jugador, dorsal =:dorsal, edad=:edad WHERE cod_jugador =:cod_jugador');

@@ -7,7 +7,7 @@ $crud = new CrudEquipo();
 
 $codigoEquipo = $_GET['cod_equipo'];
 
-$equipo = $crud->obtenerEquipo($codigoEquipo);
+$equipo = $crud->obtener($codigoEquipo);
 
 
 ?>

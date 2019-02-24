@@ -2,8 +2,9 @@
 
 require_once('conexion.php');
 require_once('equipo.php');
+require_once('crud_general.php');
 
-   class CrudEquipo{
+   class CrudEquipo extends Crud_general{
 
    	public function __construct(){}
 
@@ -50,7 +51,7 @@ require_once('equipo.php');
 		$eliminarEquipo->execute();
 	}
 
-	public function modificarJugador($equipo)
+	public function modificar($equipo)
 	{
 		$db=Db::conectar();
 		$modificar = $db ->prepare('UPDATE equipo SET nom_equipo=:nom_equipo WHERE cod_equipo =:cod_equipo');
@@ -60,7 +61,7 @@ require_once('equipo.php');
 		$modificar->execute();
 	}
 
-  public function obtenerEquipo($codigoEquipo){
+  public function obtener($codigoEquipo){
 			$db=Db::conectar();
 			$select=$db->prepare('SELECT * FROM equipo WHERE cod_equipo=:elCodigo');
 			$select->bindValue('elCodigo',$codigoEquipo);

@@ -21,7 +21,7 @@
     $elJugador->setPosicion($_POST['pos_jugador']);
 
 
-  	$crud->modificarJugador($elJugador);
+  	$crud->modificar($elJugador);
 
     header('Location: plantillaEquipos.php');
 

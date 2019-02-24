@@ -10,8 +10,8 @@ $jugador= new Jugador();
 //obtiene todos las noticias con el método mostrar de la clase crud
 $codigoEquipo = $_GET['cod_equipo'];
 
-$equipo = $crudEquipo->obtenerEquipo($codigoEquipo);
-$listaJugadores=$crud->mostrar($codigoEquipo);
+$equipo = $crudEquipo->obtener($codigoEquipo);
+$listaJugadores=$crud->mostrarJugadores($codigoEquipo);
 
 
 
