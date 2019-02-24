@@ -7,7 +7,7 @@
 	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
 
   $codigoEstadio = $_GET['cod_estadio'];
-	$estadio=$crud->obtenerEstadio($codigoEstadio);
+	$estadio=$crud->obtener($codigoEstadio);
 
 	session_start();
 ?>

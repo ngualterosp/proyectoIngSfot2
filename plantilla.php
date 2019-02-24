@@ -14,8 +14,8 @@
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="login.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-unlock-alt w3-margin-right"></i>Login</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-home"> Inicio</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Estadisticas </a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-globe"> Estadios</a>
+  <a href="#stats" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Estadisticas </a>
+  <a href="#stadiums" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-globe"> Estadios</a>
   <!--<a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white 	fa fa-line-chart"> Clasificación</a>-->
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-phone"> Contactos</a>
  </div>

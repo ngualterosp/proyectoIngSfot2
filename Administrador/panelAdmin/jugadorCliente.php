@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <body id="myPage">
 
-    <div class="w3-container w3-padding-64 w3-center" id="team">
+    <div class="w3-container w3-padding-64 w3-center" id="stats">
     <h2>MÁXIMOS GOLEADORES</h2>
 
     <?php foreach ($listaJugadores as $jugador) {

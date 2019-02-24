@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <body id="myPage">
-  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="stadiums">
 
   <div class="w3-quarter">
   <h2>Estadios de la liga</h2>

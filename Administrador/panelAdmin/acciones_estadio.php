@@ -17,7 +17,7 @@
     $elEstadio->setLugarEstadio($_POST['lugar_estadio']);
     $elEstadio->setAnoEstadio($_POST['anofunda_estadio']);
     $elEstadio->setCapacidadEstadio($_POST['capa_estadio']);
-  	$crud->modificarEstadio($elEstadio);
+  	$crud->modificar($elEstadio);
 
     header('Location: plantillaEstadio.php');
 

@@ -2,8 +2,9 @@
 
 require_once('conexion.php');
 require_once('estadio.php');
+require_once('crud_general.php');
 
-   class CrudEstadio{
+   class CrudEstadio extends crud_general{
 
    	public function __construct(){}
 
@@ -11,6 +12,8 @@ require_once('estadio.php');
 
    	public function insertar($estadio)
    	{
+
+   		
    		$db=Db::conectar();
    		$insert=$db->prepare('INSERT INTO estadio( nom_estadio, lugar_estadio, anofunda_estadio, capa_estadio, ima_estadio) values(:nom_estadio,:lugar_estadio,:anofunda_estadio,:capa_estadio,:ima_estadio)');
 
@@ -59,7 +62,7 @@ require_once('estadio.php');
 		$eliminarEstadio->execute();
 	}
 
-	public function modificarEstadio($estadio)
+	public function modificar($estadio)
 	{
 		$db=Db::conectar();
 		$modificar = $db ->prepare('UPDATE estadio SET nom_estadio=:nom_estadio, lugar_estadio=:lugar_estadio, anofunda_estadio=:anofunda_estadio, capa_estadio=:capa_estadio WHERE cod_estadio =:cod_estadio');
@@ -72,7 +75,7 @@ require_once('estadio.php');
 		$modificar->execute();
 	}
 
-  public function obtenerEstadio($codigoEstadio){
+  public function obtener($codigoEstadio){
 			$db=Db::conectar();
 			$select=$db->prepare('SELECT * FROM estadio WHERE cod_estadio=:elCodigo');
 			$select->bindValue('elCodigo',$codigoEstadio);
