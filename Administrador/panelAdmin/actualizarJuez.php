@@ -114,11 +114,11 @@
   <br><br>
 
    <tr>
-      <td><input type="hidden" name="cod_juez" value='<?php echo $juez->getCodigoJuez()?>'></td>
+      <td><input type="hidden"  name="cod_juez" value='<?php echo $juez->getCodigoJuez()?>'></td>
     </tr>
 <p>
 <label>Nombre Arbitro:</label>
-<input value="<?php echo $juez->getNombreJuez()?>" name="nom_juez" class="w3-input" type="text"></p>
+<input value="<?php echo $juez->getNombreJuez()?>" name="nom_juez" required class="w3-input" type="text"></p>
 
 <center><button id="actualizarJuez" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="actualizarJuez">Actualizar</button></center>
 

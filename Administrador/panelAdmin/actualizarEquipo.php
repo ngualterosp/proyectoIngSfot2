@@ -118,7 +118,7 @@ $equipo = $crud->obtenerEquipo($codigoEquipo);
     </tr>
 <p>
 <label>Nombre Equipo:</label>
-<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text" value = "<?php echo $equipo->getNombreEquipo()?>"></p>
+<input id="nom_equipo" required placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text" value = "<?php echo $equipo->getNombreEquipo()?>"></p>
 
 <center><button id="actualizarEquipo" type="submit" name="actualizarEquipo" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Actualizar</button></center>
 

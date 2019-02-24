@@ -110,16 +110,16 @@ $crud = new CrudEstadio();
   <br><br>
 <p>
 <label>Nombre Estadio:</label>
-<input id="nom_estadio" placeholder="Nombre Estadio" name="nom_estadio" class="w3-input" type="text"></p>
+<input id="nom_estadio" required placeholder="Nombre Estadio" name="nom_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Ubicación:</label>
-<input id="lugar_estadio" placeholder="Ubicación" name="lugar_estadio" class="w3-input" type="text"></p>
+<input id="lugar_estadio" required placeholder="Ubicación" name="lugar_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Año Fundado:</label>
-<input id="anofunda_estadio" placeholder="Año Fundado" name="anofunda_estadio" class="w3-input" type="text"></p>
+<input id="anofunda_estadio" required placeholder="Año Fundado" name="anofunda_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Capacidad Estadio:</label>
-<input id="capa_estadio" placeholder="Capacidad Estadio" name="capa_estadio" class="w3-input" type="text"></p>
+<input id="capa_estadio" required placeholder="Capacidad Estadio" name="capa_estadio" class="w3-input" type="text"></p>
 
 <p>
 <input type="file" required name="ima_estadio"/></p>

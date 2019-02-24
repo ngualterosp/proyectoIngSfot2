@@ -66,22 +66,23 @@ include('Administrador/panelAdmin/jugadorCliente.php');
       <p><i class=""></i>  Envia tu comentario! </p>
       <div class="w3-section">
         <label>Nombre</label>
-        <input class="w3-input" type="text" name="Name" required>
+        <input required name="nombre" class="w3-input" type="text"placeholder="Nombre..."></p>
       </div>
       <div class="w3-section">
         <label>Email</label>
-        <input class="w3-input" type="text" name="Email" required>
+        <input class="w3-input" required type="text" name="Email" required placeholder="email...">
       </div>
       <div class="w3-section">
         <label>Mensaje</label>
-        <input class="w3-input" type="text" name="Message" required>
+        <input class="w3-input" required type="text" name="Message" required placeholder="mensaje...">
       </div>
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>Acepto terminos y condiciones</label>
-      <button onClick="location.reload();" class="w3-button w3-right w3-theme">Enviar</button>
+
+      <button type="submit" class="w3-button w3-right w3-theme">Enviar</button>
     </div>
   </div>
 </div>
+
+
 
 <!-- Image of location/map -->
 <img src="img/champions.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
@@ -95,7 +96,7 @@ include('Administrador/panelAdmin/jugadorCliente.php');
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
   <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
 
-  
+
 </footer>
 
 <script>

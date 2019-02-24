@@ -125,18 +125,18 @@ $equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
   <p>
 <p>
 <label>Nombre Jugador:</label>
-<input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
+<input id="nombreJugadorParam" required placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
 <p>
 <label>Posición:</label>
-<input id="posParam" placeholder="Posición Jugador" name="posParam" class="w3-input" type="text"></p>
+<input id="posParam" required placeholder="Posición Jugador" name="posParam" class="w3-input" type="text"></p>
 <p>
 <label>Dorsal:</label>
-<input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
+<input id="dorsalParam" required placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
 <p>
 <label>Edad:</label>
-<input id="edadParam" placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
+<input id="edadParam" required placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
 <p>
-<input type="file" required name="fotoParam"/></p>
+<input type="file" required required name="fotoParam"/></p>
 
 <center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
 

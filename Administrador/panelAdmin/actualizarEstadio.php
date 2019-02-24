@@ -118,16 +118,16 @@
     </tr>
 <p>
 <label>Nombre Estadio:</label>
-<input value="<?php echo $estadio->getNombreEstadio()?>" name="nom_estadio" class="w3-input" type="text"></p>
+<input value="<?php echo $estadio->getNombreEstadio()?>" required name="nom_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Ubicación:</label>
-<input value="<?php echo $estadio->getLugarEstadio()?>" name="lugar_estadio" class="w3-input" type="text"></p>
+<input value="<?php echo $estadio->getLugarEstadio()?>" required name="lugar_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Año Fundado:</label>
-<input value="<?php echo $estadio->getAnoEstadio()?>" name="anofunda_estadio" class="w3-input" type="text"></p>
+<input value="<?php echo $estadio->getAnoEstadio()?>" required name="anofunda_estadio" class="w3-input" type="text"></p>
 <p>
 <label>Capacidad Estadio:</label>
-<input value="<?php echo $estadio->getCapacidadEstadio()?>" name="capa_estadio" class="w3-input" type="text"></p>
+<input value="<?php echo $estadio->getCapacidadEstadio()?>" required name="capa_estadio" class="w3-input" type="text"></p>
 
 
 <center><button id="actualizarEstadio" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="actualizarEstadio">Actualizar</button></center>

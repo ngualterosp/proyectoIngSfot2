@@ -115,16 +115,16 @@
 						</p>
 						<p>
 						<label>Nombre Jugador:</label>
-						<input value='<?php echo $jugador->getNombre()?>' name="nom_jugador" class="w3-input" type="text"></p>
+						<input required value='<?php echo $jugador->getNombre()?>' name="nom_jugador" class="w3-input" type="text"></p>
 						<p>
 						<label>Posición Jugador:</label>
-						<input value='<?php echo $jugador->getPosicion()?>' name="pos_jugador" class="w3-input" type="text"></p>
+						<input required value='<?php echo $jugador->getPosicion()?>' name="pos_jugador" class="w3-input" type="text"></p>
 						<p>
 						<label>Dorsal:</label>
-						<input value='<?php echo $jugador->getDorsal()?>' name="dorsal" class="w3-input" type="text"></p>
+						<input required value='<?php echo $jugador->getDorsal()?>' name="dorsal" class="w3-input" type="text"></p>
 						<p>
 						<label>Edad:</label>
-						<input value='<?php echo $jugador->getEdad()?>' name="edad" class="w3-input" type="text"></p>
+						<input required value='<?php echo $jugador->getEdad()?>' name="edad" class="w3-input" type="text"></p>
 
 						<center><button type="submit" value="Modificar" name="actualizarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Modificar</button></center>
 

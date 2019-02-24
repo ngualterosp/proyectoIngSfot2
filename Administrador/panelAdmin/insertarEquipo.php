@@ -110,7 +110,7 @@ $crud = new CrudJugador();
   <br><br>
 <p>
 <label>Nombre Equipo:</label>
-<input id="nom_equipo" placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text"></p>
+<input id="nom_equipo" required placeholder="Nombre Equipo" name="nom_equipo" class="w3-input" type="text"></p>
 
 <p>
 <input type="file" required name="escudo"/></p>
