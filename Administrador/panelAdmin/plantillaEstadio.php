@@ -1,15 +1,14 @@
 <?php
 //incluye la clase noticia y Crudnoticia
-require_once('crud_juez.php');
-require_once('juez.php');
-$crud=new CrudJuez();
-$juez= new Juez();
-//obtiene todos las noticias con el método mostrar de la clase crud
-$listaJueces=$crud->mostrar();
+require_once('crud_estadio.php');
+require_once('estadio.php');
+$crud=new CrudEstadio();
 
 
+$listaEstadios=$crud->mostrar();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,34 +101,30 @@ $listaJueces=$crud->mostrar();
 
     <div id="content-wrapper">
 
-      <?php
-
-
-
-?>
-
 
       <form action="" method="get">
-      <a class="btn btn-primary " href="insertarJuez.php">Insertar Juez</a>
-
-
-
+        <a class="btn btn-primary " href="insertarEstadio.php">Insertar Estadio</a>
 
        <br></br>
 
        <table class="table table-striped">
          <head>
-           <td>Nombre Juez</td>
+           <td>Nombre Estadio</td>
+           <td>Ubicación</td>
+           <td>Año Fundado</td>
+           <td>Capacidad</td>
            <td>Actualizar</td>
            <td>Eliminar</td>
          </head>
          <body>
-           <?php foreach ($listaJueces as $juez) {?>
+           <?php foreach ($listaEstadios as $estadio) {?>
            <tr>
-             <td><?php echo $juez->getNombreJuez() ?></td>
-             <td><a class="btn btn-primary" href="actualizarJuez.php?cod_juez=<?php echo $juez->getCodigoJuez()?>">Modificar</a></td>
-             <td><a class="btn btn-primary" href="acciones_juez.php?codigoJuezParam=<?php echo $juez->getCodigoJuez()?>&accion=e">Eliminar</a></td>
-
+             <td><?php echo $estadio->getNombreEstadio() ?></td>
+             <td><?php echo $estadio->getLugarEstadio() ?></td>
+             <td><?php echo $estadio->getAnoEstadio() ?></td>
+             <td><?php echo $estadio->getCapacidadEstadio()?> </td>
+             <td><a class="btn btn-primary" href="actualizarEstadio.php?cod_estadio=<?php echo $estadio->getCodigoEstadio()?>">Modificar</a></td>
+             <td><a class="btn btn-primary" href="acciones_estadio.php?codigoEstadio=<?php echo $estadio->getCodigoEstadio()?>&accion=e">Eliminar</a></td>
            </tr>
            <?php } ?>
          </body>

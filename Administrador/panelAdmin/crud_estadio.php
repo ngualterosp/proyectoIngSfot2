@@ -12,9 +12,13 @@ require_once('estadio.php');
    	public function insertar($estadio)
    	{
    		$db=Db::conectar();
-   		$insert=$db->prepare('INSERT INTO estadio( nom_estadio, lugar_estadio, anofunda_estadio, capa_estadio, ima_estadio) values(:nom_estadio,:lugar_estadio,:añofunda_estadio,:capa_estadio,:ima_estadio)');
+   		$insert=$db->prepare('INSERT INTO estadio( nom_estadio, lugar_estadio, anofunda_estadio, capa_estadio, ima_estadio) values(:nom_estadio,:lugar_estadio,:anofunda_estadio,:capa_estadio,:ima_estadio)');
 
 			$insert->bindValue('nom_estadio',$estadio->getNombreEstadio());
+      $insert->bindValue('lugar_estadio',$estadio->getLugarEstadio());
+      $insert->bindValue('anofunda_estadio',$estadio->getAnoEstadio());
+      $insert->bindValue('capa_estadio',$estadio->getCapacidadEstadio());
+      $insert->bindValue('ima_estadio',$estadio->getImagenEstadio());
 			$insert->execute();
    	}
 
@@ -58,9 +62,12 @@ require_once('estadio.php');
 	public function modificarEstadio($estadio)
 	{
 		$db=Db::conectar();
-		$modificar = $db ->prepare('UPDATE estadio SET nom_estadio=:nom_estadio WHERE cod_estadio =:cod_estadio');
+		$modificar = $db ->prepare('UPDATE estadio SET nom_estadio=:nom_estadio, lugar_estadio=:lugar_estadio, anofunda_estadio=:anofunda_estadio, capa_estadio=:capa_estadio WHERE cod_estadio =:cod_estadio');
 		$modificar->bindValue('cod_estadio', $estadio->getCodigoEstadio());
-		$modificar->bindValue('nom_estadio', $estadio->getNombreEquipo());
+		$modificar->bindValue('nom_estadio', $estadio->getNombreEstadio());
+    $modificar->bindValue('lugar_estadio',$estadio->getLugarEstadio());
+    $modificar->bindValue('anofunda_estadio',$estadio->getAnoEstadio());
+    $modificar->bindValue('capa_estadio',$estadio->getCapacidadEstadio());
 
 		$modificar->execute();
 	}
@@ -72,8 +79,13 @@ require_once('estadio.php');
 			$select->execute();
 			$estadio=$select->fetch();
 			$myEstadio= new Estadio();
-			$myEstadio->setCodigoEstadio($estadio['$cod_estadio']);
+			$myEstadio->setCodigoEstadio($estadio['cod_estadio']);
 			$myEstadio->setNombreEstadio($estadio['nom_estadio']);
+      $myEstadio->setLugarEstadio($estadio['lugar_estadio']);
+      $myEstadio->setAnoEstadio($estadio['anofunda_estadio']);
+      $myEstadio->setCapacidadEstadio($estadio['capa_estadio']);
+      $myEstadio->setImagenEstadio($estadio['ima_estadio']);
+
 			return $myEstadio;
 		}
 

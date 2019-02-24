@@ -90,6 +90,12 @@ $listaEquipos=$crud->mostrar();
           <span>Arbitros</span>
         </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaEstadio.php">
+          <i class="fa fa-map-pin"></i>
+          <span>Estadios</span>
+        </a>
+      </li>
     </ul>
 
     <div id="content-wrapper">

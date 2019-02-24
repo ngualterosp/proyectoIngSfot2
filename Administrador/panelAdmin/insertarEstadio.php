@@ -1,20 +1,9 @@
 <?php
 session_start();
 require_once "conexion.php";
-require_once "crud_jugador.php";
-require_once "crud_equipo.php";
+require_once "crud_estadio.php";
 
-$crudEquipo = new CrudEquipo();
-
-$crud = new CrudJugador();
-
-$codigoEquipo = $_GET['codigoEquipoParam'];
-
-
-
-$equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
-
-
+$crud = new CrudEstadio();
 
 
 ?>
@@ -114,31 +103,28 @@ $equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
     <div id="content-wrapper">
 
       <div class="w3-container w3-black">
-        <center><h2>Insertar Jugador</h2></center>
+        <center><h2>Insertar Estadio</h2></center>
       </div>
 
-<form id="form_35166" method="post" action="acciones_jugador.php" enctype="multipart/form-data" class="w3-container">
+<form id="form_35166" method="post" action="acciones_estadio.php" enctype="multipart/form-data" class="w3-container">
   <br><br>
-  <p>
-  <label> Equipo: <?php echo $equipo->getNombreEquipo() ?></label>
-  <input id="equipoParam" placeholder="<?php echo $equipo->getCodigoEquipo()?>" name="equipoParam" class="w3-input" type="hidden" value = "<?php echo $equipo->getCodigoEquipo()?>"></p>
-  <p>
 <p>
-<label>Nombre Jugador:</label>
-<input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
+<label>Nombre Estadio:</label>
+<input id="nom_estadio" placeholder="Nombre Estadio" name="nom_estadio" class="w3-input" type="text"></p>
 <p>
-<label>Posición:</label>
-<input id="posParam" placeholder="Posición Jugador" name="posParam" class="w3-input" type="text"></p>
+<label>Ubicación:</label>
+<input id="lugar_estadio" placeholder="Ubicación" name="lugar_estadio" class="w3-input" type="text"></p>
 <p>
-<label>Dorsal:</label>
-<input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
+<label>Año Fundado:</label>
+<input id="anofunda_estadio" placeholder="Año Fundado" name="anofunda_estadio" class="w3-input" type="text"></p>
 <p>
-<label>Edad:</label>
-<input id="edadParam" placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
-<p>
-<input type="file" required name="fotoParam"/></p>
+<label>Capacidad Estadio:</label>
+<input id="capa_estadio" placeholder="Capacidad Estadio" name="capa_estadio" class="w3-input" type="text"></p>
 
-<center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
+<p>
+<input type="file" required name="ima_estadio"/></p>
+
+<center><button id="insertarEstadio" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="insertarEstadio">Insertar</button></center>
 
 </form>
 

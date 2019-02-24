@@ -1,22 +1,15 @@
 <?php
-session_start();
-require_once "conexion.php";
-require_once "crud_jugador.php";
-require_once "crud_equipo.php";
+//incluye la clase noticia y CrudNoticia
+	require_once('crud_estadio.php');
+	require_once('estadio.php');
+	$crud= new CrudEstadio();
+	$estadio=new Estadio();
+	//busca la noticia utilizando el id, que es enviado por GET desde la vista mostrar.php
 
-$crudEquipo = new CrudEquipo();
+  $codigoEstadio = $_GET['cod_estadio'];
+	$estadio=$crud->obtenerEstadio($codigoEstadio);
 
-$crud = new CrudJugador();
-
-$codigoEquipo = $_GET['codigoEquipoParam'];
-
-
-
-$equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
-
-
-
-
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +96,7 @@ $equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
           <span>Arbitros</span>
         </a>
       </li>
-      <li class="nav-item active">
+			<li class="nav-item active">
         <a class="nav-link" href="plantillaEstadio.php">
           <i class="fa fa-map-pin"></i>
           <span>Estadios</span>
@@ -114,53 +107,34 @@ $equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
     <div id="content-wrapper">
 
       <div class="w3-container w3-black">
-        <center><h2>Insertar Jugador</h2></center>
+        <center><h2>Modificar Estadio</h2></center>
       </div>
 
-<form id="form_35166" method="post" action="acciones_jugador.php" enctype="multipart/form-data" class="w3-container">
+<form action='acciones_estadio.php' method='post'>
   <br><br>
-  <p>
-  <label> Equipo: <?php echo $equipo->getNombreEquipo() ?></label>
-  <input id="equipoParam" placeholder="<?php echo $equipo->getCodigoEquipo()?>" name="equipoParam" class="w3-input" type="hidden" value = "<?php echo $equipo->getCodigoEquipo()?>"></p>
-  <p>
-<p>
-<label>Nombre Jugador:</label>
-<input id="nombreJugadorParam" placeholder="Nombre Jugador" name="nombreJugadorParam" class="w3-input" type="text"></p>
-<p>
-<label>Posición:</label>
-<input id="posParam" placeholder="Posición Jugador" name="posParam" class="w3-input" type="text"></p>
-<p>
-<label>Dorsal:</label>
-<input id="dorsalParam" placeholder="Dorsal" name="dorsalParam" class="w3-input" type="text"></p>
-<p>
-<label>Edad:</label>
-<input id="edadParam" placeholder="Edad" name="edadParam" class="w3-input" type="text"></p>
-<p>
-<input type="file" required name="fotoParam"/></p>
 
-<center><button id="insertarJugador" type="submit" name="insertarJugador" class="w3-btn w3-white w3-border w3-border-black w3-round-large">Insertar</button></center>
+   <tr>
+      <td><input type="hidden" name="cod_estadio" value='<?php echo $estadio->getCodigoEstadio()?>'></td>
+    </tr>
+<p>
+<label>Nombre Estadio:</label>
+<input value="<?php echo $estadio->getNombreEstadio()?>" name="nom_estadio" class="w3-input" type="text"></p>
+<p>
+<label>Ubicación:</label>
+<input value="<?php echo $estadio->getLugarEstadio()?>" name="lugar_estadio" class="w3-input" type="text"></p>
+<p>
+<label>Año Fundado:</label>
+<input value="<?php echo $estadio->getAnoEstadio()?>" name="anofunda_estadio" class="w3-input" type="text"></p>
+<p>
+<label>Capacidad Estadio:</label>
+<input value="<?php echo $estadio->getCapacidadEstadio()?>" name="capa_estadio" class="w3-input" type="text"></p>
+
+
+<center><button id="actualizarEstadio" class="w3-btn w3-white w3-border w3-border-black w3-round-large" type="submit" name="actualizarEstadio">Actualizar</button></center>
 
 </form>
 
-						<div id="segundaCapa">
 
-              <?php
-            			        $db = Db::conectar();
-                                if(isset($_POST['nom_categoria']))
-                                {
-                                      $nombreVar=$_POST['nom_categoria'];
-                                      $categoria = new Categoria();
-                                      $categoria->setNombre($nombreVar);
-                                      $categoria->setRuta(addslashes(file_get_contents($_FILES['ruta_imagen']['tmp_name'])));
-
-                                      $crud->insertarCategoria($categoria);
-
-
-                                }
-
-                                ?>
-
-						</div>
 
           <footer class="sticky-footer">
             <div class="container my-auto">

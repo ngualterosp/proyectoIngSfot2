@@ -96,12 +96,18 @@ $equipo = $crud->obtenerEquipo($codigoEquipo);
           <span>Arbitros</span>
         </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="plantillaEstadio.php">
+          <i class="fa fa-map-pin"></i>
+          <span>Estadios</span>
+        </a>
+      </li>
     </ul>
 
     <div id="content-wrapper">
 
       <div class="w3-container w3-black">
-        <center><h2>Insertar Equipo</h2></center>
+        <center><h2>Modificar Equipo</h2></center>
       </div>
 
 <form id="form_35166" method="post" action="acciones_equipo.php" enctype="multipart/form-data" class="w3-container">
