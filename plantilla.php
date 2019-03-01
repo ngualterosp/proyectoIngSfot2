@@ -73,8 +73,9 @@ include('Administrador/panelAdmin/jugadorCliente.php');
         <input class="w3-input" required type="text" name="Email" required placeholder="email...">
       </div>
       <div class="w3-section">
-        <label>Mensaje</label>
-        <input class="w3-input" required type="text" name="Message" required placeholder="mensaje...">
+        <label>Mensaje</label><br>
+        <textarea class="w3-text-area"rows="4" cols="50" required placeholder="Mensaje...">
+      </textarea>
       </div>
 
       <button type="submit" class="w3-button w3-right w3-theme">Enviar</button>
