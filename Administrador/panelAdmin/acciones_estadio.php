@@ -28,7 +28,6 @@
   {
     $elEstadio = new Estadio();
 
-    $elEstadio->setCodigoEstadio($_POST['cod_estadio']);
     $elEstadio->setNombreEstadio($_POST['nom_estadio']);
     $elEstadio->setLugarEstadio($_POST['lugar_estadio']);
     $elEstadio->setAnoEstadio($_POST['anofunda_estadio']);
