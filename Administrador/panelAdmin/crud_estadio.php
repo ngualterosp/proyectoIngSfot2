@@ -17,12 +17,12 @@ require_once('crud_general.php');
    		$db=Db::conectar();
    		$insert=$db->prepare('INSERT INTO estadio( nom_estadio, lugar_estadio, anofunda_estadio, capa_estadio, ima_estadio) values(:nom_estadio,:lugar_estadio,:anofunda_estadio,:capa_estadio,:ima_estadio)');
 
-			$insert->bindValue('nom_estadio',$estadio->getNombreEstadio());
+      $insert->bindValue('nom_estadio',$estadio->getNombreEstadio());
       $insert->bindValue('lugar_estadio',$estadio->getLugarEstadio());
       $insert->bindValue('anofunda_estadio',$estadio->getAnoEstadio());
       $insert->bindValue('capa_estadio',$estadio->getCapacidadEstadio());
       $insert->bindValue('ima_estadio',$estadio->getImagenEstadio());
-			$insert->execute();
+	  $insert->execute();
    	}
 
 

@@ -33,7 +33,7 @@
 
 
     <div class="w3-quarter">
-      <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:100px" class="w3-circle w3-hover-opacity">
       <h3><?php echo $jugador->getNombre()?></h3>
       <p>Posición: <?php echo $jugador->getPosicion()?></p>
       <p>Dorsal: <?php echo $jugador->getDorsal()?></p>
@@ -54,7 +54,7 @@
 ?>
 
 <div class="w3-quarter">
-  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:100px%" class="w3-circle w3-hover-opacity">
   <h3><?php echo $jugador->getNombre()?></h3>
   <p>Posición: <?php echo $jugador->getPosicion()?></p>
   <p>Dorsal: <?php echo $jugador->getDorsal()?></p>
@@ -76,7 +76,7 @@
 ?>
 
 <div class="w3-quarter">
-  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($jugador->getFotoJugador())); ?>" alt="Boss" style="width:100px" class="w3-circle w3-hover-opacity">
   <h3><?php echo $jugador->getNombre()?></h3>
   <p>Posición: <?php echo $jugador->getPosicion()?></p>
   <p>Dorsal: <?php echo $jugador->getDorsal()?></p>

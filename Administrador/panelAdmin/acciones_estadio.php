@@ -28,14 +28,12 @@
   {
     $elEstadio = new Estadio();
 
-    $elEstadio->setCodigoEstadio($_POST['cod_estadio']);
     $elEstadio->setNombreEstadio($_POST['nom_estadio']);
     $elEstadio->setLugarEstadio($_POST['lugar_estadio']);
     $elEstadio->setAnoEstadio($_POST['anofunda_estadio']);
     $elEstadio->setCapacidadEstadio($_POST['capa_estadio']);
     $elEstadio->setImagenEstadio(addslashes(file_get_contents($_FILES['ima_estadio']['tmp_name'])));
-
-     $crud->insertar($elEstadio);
+    $crud->insertar($elEstadio);
 
      header('Location: plantillaEstadio.php');
 

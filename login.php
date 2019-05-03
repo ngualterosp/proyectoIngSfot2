@@ -130,6 +130,31 @@
     ?>
 
     <style>
+
+            .error {
+          position: relative;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 10px;
+          color: white;
+          width: 220px;
+          text-align: center;
+          font-size: 12px;
+          margin: 484px;
+          font-weight: bold;
+          background: RGB(194, 46, 79);
+        }
+
+        .error::after {
+    content: '';
+    border-bottom: 15px solid RGB(194, 46, 79);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 20%;
+    top: -14px;
+}
+
     body{
     background: url(img/champions.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;

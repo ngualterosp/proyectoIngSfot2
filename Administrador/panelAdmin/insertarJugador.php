@@ -12,7 +12,7 @@ $codigoEquipo = $_GET['codigoEquipoParam'];
 
 
 
-$equipo= $crudEquipo->obtenerEquipo($codigoEquipo);
+$equipo= $crudEquipo->obtener($codigoEquipo);
 
 
 
