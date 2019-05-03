@@ -1,12 +1,17 @@
 <?php
 //incluye la clase noticia y Crudnoticia
 require_once('crud_jugador.php');
+include('../../webServices/nusoap.php');
 require_once('crud_equipo.php');
 require_once('jugador.php');
 $crud=new CrudJugador();
 $crudEquipo = new CrudEquipo();
 $equipo = new Equipo();
 $jugador= new Jugador();
+$url="http://localhost/proyectoSoft2/proyectoIngSfot2/webServices/server.php?wsdl";
+
+$clienteWS = new nusoap_client($url);
+$clienteWS->call("consulta", array());
 //obtiene todos las noticias con el método mostrar de la clase crud
 $codigoEquipo = $_GET['cod_equipo'];
 

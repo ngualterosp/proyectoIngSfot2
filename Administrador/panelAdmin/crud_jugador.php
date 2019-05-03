@@ -9,6 +9,33 @@ require_once('crud_general.php');
 
 
 
+    public function obtenerGraciasAlYeison($elYeison)
+    {
+        $variable = json_decode($elYeison);
+        $id = $variable[0]->cod_jugador;
+        $codEquipo = $variable[0]->cod_equipo;
+        $nomJugador = $variable[0]->nom_jugador;
+        $posJugador = $variable[0]->pos_jugador;
+        $laDorsal = $variable[0]->dorsal;
+        $laEdad = $variable[0]->edad;
+        $laJoto = $variable[0]->foto_jugador;
+
+       
+
+        $elJugador = new Jugador();
+        $elJugador->setCodigoJugador($id);
+        $elJugador->setCodigoEquipo($codEquipo);
+        $elJugador->setNombre($nomJugador);
+        $elJugador->setPosicion($posJugador);
+        $elJugador->setDorsal($laDorsal);
+        $elJugador->setEdad($laEdad);
+        $elJugador->setFotoJugador($laJoto);
+
+
+        return $elJugador;
+        
+    }
+
 
     public function obtener($codJugador)
     {
