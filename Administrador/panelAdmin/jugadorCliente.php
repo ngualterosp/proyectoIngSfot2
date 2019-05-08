@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <body id="myPage">
+  <body id="jugadores">
 
-    <div class="w3-container w3-padding-64 w3-center" id="stats">
+    <div class="w3-container w3-padding-64 w3-center" id="goals">
     <h2>MÁXIMOS GOLEADORES</h2>
 
     <?php foreach ($listaJugadores as $jugador) {
@@ -45,7 +45,7 @@
 
 </div>
 
-<div class="w3-container w3-padding-64 w3-center" id="team">
+<div class="w3-container w3-padding-64 w3-center" id="asis">
 <h2>MÁXIMOS ASISTENTES</h2>
 
 <?php foreach ($listaJugadores as $jugador) {
@@ -67,7 +67,7 @@
 
 </div>
 
-<div class="w3-container w3-padding-64 w3-center" id="team">
+<div class="w3-container w3-padding-64 w3-center" id="venc">
 <h2>MALLA MENOS VENCIDA</h2>
 
 <?php foreach ($listaJugadores as $jugador) {
