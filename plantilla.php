@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" lang="en">
 <title>Information Soccer League</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,8 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="login.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-unlock-alt w3-margin-right"></i>Login</a>
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><strong class="fa fa-bars"></strong></a>
+  <a href="login.php" class="w3-bar-item w3-button w3-teal"><strong class="fa fa-unlock-alt w3-margin-right"></strong>Login</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-home"> Inicio</a>
   <a href="#stats" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-group"> Estadisticas </a>
   <a href="#stadiums" class="w3-bar-item w3-button w3-hide-small w3-hover-white fa fa-globe"> Estadios</a>
@@ -58,12 +58,12 @@ include('Administrador/panelAdmin/jugadorCliente.php');
   <div class="w3-row">
     <div class="w3-col m5">
     <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contactenos</span></div>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Bogotá, Col</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i> +57 3102341392</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  soccerlegaue@gmail.com </p>
+      <p><strong class="fa fa-map-marker w3-text-teal w3-xlarge"></strong>  Bogotá, Col</p>
+      <p><strong class="fa fa-phone w3-text-teal w3-xlarge"></strong> +57 3102341392</p>
+      <p><strong class="fa fa-envelope-o w3-text-teal w3-xlarge"></strong>  soccerlegaue@gmail.com </p>
     </div>
     <div class="w3-col m7">
-      <p><i class=""></i>  Envia tu comentario! </p>
+      <p><strong class=""></strong>  Envia tu comentario! </p>
       <div class="w3-section">
         <label for="nombre">Nombre</label>
         <input name="nombre" class="w3-input" type="text" id="nombre" placeholder="Nombre..." required></p>
@@ -85,15 +85,15 @@ include('Administrador/panelAdmin/jugadorCliente.php');
 
 
 <!-- Image of location/map -->
-<img src="img/champions.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+<img alt="" src="img/champions.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Síguenos</h4>
-  <a class="w3-button w3-large w3-teal" href="https://es-la.facebook.com/fcbarcelona/" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://twitter.com/fcbarcelona_es?lang=es" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/fcbarcelona/?hl=es-la" title="Instagram"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://es.linkedin.com/jobs/empleos-en-barcelona-y-alrededores-espa%C3%B1a?pageNum=0&position=1" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://es-la.facebook.com/fcbarcelona/" title="Facebook"><strong class="fa fa-facebook"></strong></a>
+  <a class="w3-button w3-large w3-teal" href="https://twitter.com/fcbarcelona_es?lang=es" title="Twitter"><strong class="fa fa-twitter"></strong></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/fcbarcelona/?hl=es-la" title="Instagram"><strong class="fa fa-instagram"></strong></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://es.linkedin.com/jobs/empleos-en-barcelona-y-alrededores-espa%C3%B1a?pageNum=0&position=1" title="Linkedin"><strong class="fa fa-linkedin"></strong></a>
 
 
 </footer>

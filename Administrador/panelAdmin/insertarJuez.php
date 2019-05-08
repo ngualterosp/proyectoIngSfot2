@@ -9,7 +9,7 @@ $crud = new CrudJuez();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" lang="en">
 
 <head>
 
