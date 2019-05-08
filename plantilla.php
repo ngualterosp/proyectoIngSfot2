@@ -65,17 +65,16 @@ include('Administrador/panelAdmin/jugadorCliente.php');
     <div class="w3-col m7">
       <p><i class=""></i>  Envia tu comentario! </p>
       <div class="w3-section">
-        <label>Nombre</label>
-        <input required name="nombre" class="w3-input" type="text"placeholder="Nombre..."></p>
+        <label for="nombre">Nombre</label>
+        <input name="nombre" class="w3-input" type="text" id="nombre" placeholder="Nombre..." required></p>
       </div>
       <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input" required type="text" name="Email" required placeholder="email...">
+        <label for="Email">Email</label>
+        <input class="w3-input" required type="text" name="Email" id="Email" placeholder="email...">
       </div>
       <div class="w3-section">
-        <label>Mensaje</label><br>
-        <textarea class="w3-text-area"rows="4" cols="50" required placeholder="Mensaje...">
-      </textarea>
+        <label for="mensaje">Mensaje</label><br>
+        <textarea rows="4" cols="50" name="mensaje" id="mensaje" required placeholder="Mensaje..."></textarea>
       </div>
 
       <button type="submit" class="w3-button w3-right w3-theme">Enviar</button>
