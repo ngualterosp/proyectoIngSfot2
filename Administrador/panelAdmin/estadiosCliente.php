@@ -14,7 +14,7 @@
     $listaEstadio = $crud->obtenerEstadios();
 
   ?>
-  <html>
+  <html lang="es" lang="en">
   <title>Estadios</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@
 
   <div class="w3-quarter">
   <div class="w3-card w3-white">
-    <img src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($estadio->getImagenEstadio())); ?>"alt="Lights" style="width:100%">
+    <img alt="" src="data:image/jpg;base64, <?php echo base64_encode(stripslashes($estadio->getImagenEstadio())); ?>"alt="Lights" style="width:100%">
     <div class="w3-container">
     <h3><?php echo $estadio->getNombreEstadio()?></h3>
     <h4><?php echo $estadio->getLugarEstadio()?></h4>

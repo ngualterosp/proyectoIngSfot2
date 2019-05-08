@@ -20,7 +20,7 @@ $equipo= $crudEquipo->obtener($codigoEquipo);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" lang="en">
 
 <head>
 
